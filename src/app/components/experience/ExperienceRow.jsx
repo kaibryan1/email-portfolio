@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -12,29 +12,34 @@ export default function ExperienceRow({ data, isActive, onEnter, onLeave }) {
 
   // Animation Effect
   useEffect(() => {
-    ScrollTrigger.refresh();
-    const el = itemRef.current;
-    gsap.to(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: "top 60%",
-        end: "bottom 55%",
-        toggleClass: { targets: itemRef.current, className: styles.hovered },
-      },
-    });
+    if (typeof window !== "undefined") {
+      const el = itemRef.current;
 
-    return () => {
-      window.removeEventListener("resize", () => {
+      // Since setting fonts via js, we need to sync after the font is loaded
+      document.fonts.ready.then(() => {
+        gsap.to(el, {
+          scrollTrigger: {
+            trigger: el,
+            start: "top 60%",
+            end: "bottom 55%",
+            toggleClass: { targets: el, className: styles.hovered },
+          },
+        });
+
         ScrollTrigger.refresh();
       });
-    };
-  }, []);
 
-  if (window) {
-    window.addEventListener("resize", () => {
-      ScrollTrigger.refresh();
-    });
-  }
+      const handleResize = () => {
+        ScrollTrigger.refresh();
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   //Data
   const { id, title, year, type, hashTags } = data;
