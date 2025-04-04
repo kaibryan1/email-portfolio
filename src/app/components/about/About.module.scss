@@ -18,7 +18,7 @@
   margin-top: var(--spacing-6xl);
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 
   @media (max-width: 750px) {
     max-height: 45vh;

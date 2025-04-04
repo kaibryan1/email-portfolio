@@ -54,7 +54,7 @@
 
   &_wrapper {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: var(--spacing-md);
     flex-direction: column-reverse;
 
@@ -99,7 +99,7 @@
   &_second {
     @media (max-width: 750px) {
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       gap: var(--spacing-md);
     }
     &_year {
