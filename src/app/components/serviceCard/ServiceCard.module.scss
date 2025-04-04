@@ -1,28 +1,8 @@
 @use "../../../styles/_abstracts/" as mix;
 
-:root {
-  --card-padding: 40px; // Spacing
-  --sticky-base: 12vh; // Base values for sticky positioning
-  // Calculated values for card reveal
-  --card-row-desktop: calc(
-    var(--font-size-h2-desktop) + (var(--card-padding) * 2)
-  );
-  --card-row-mobile: calc(var(--font-size-h2) + (var(--card-padding) * 2));
-  // Card reveal increments - how much of previous card to show
-  --reveal-increment-desktop: var(--card-row-desktop);
-  --reveal-increment-mobile: var(--card-row-mobile);
-
-  // Card spacing (distance between cards in normal scroll)
-  --card-spacing-base-desktop: 10rem; //18
-  --card-spacing-base-mobile: 13rem; //12
-  --card-spacing-decrement: 8rem; // 8 How much to reduce spacing for each subsequent card
-}
-
 .card {
   position: sticky;
   top: 0;
-  //   padding-top: var(--spacing-2xl);
-  //   padding-bottom: var(--spacing-4xl);
   padding-top: var(--card-padding);
   padding-bottom: var(--card-padding);
   background-color: var(--surface-page);
