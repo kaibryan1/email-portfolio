@@ -1,0 +1,25 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.title {
+  grid-column: 1/6;
+  margin-bottom: var(--spacing-2xl);
+  text-transform: uppercase;
+
+  @media (max-width: 750px) {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  &_leftAligned {
+    text-align: left;
+  }
+
+  &_rightAligned {
+    text-align: right;
+    color: var(--text-heading-secondary);
+    @include mix.heading-1-desktop;
+
+    @include mix.below(450px) {
+      @include mix.heading-1;
+    }
+  }
+}

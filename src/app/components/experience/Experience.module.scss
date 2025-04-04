@@ -1,0 +1,19 @@
+.listWrapper {
+  position: relative;
+  margin-top: var(--spacing-6xl);
+  gap: 0px 24px;
+}
+
+.galleryWrapper {
+  background-color: none;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  grid-column: 7/13;
+
+  & :global(.vignette) {
+    top: 35%;
+  }
+}

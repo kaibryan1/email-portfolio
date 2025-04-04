@@ -1,0 +1,14 @@
+.wrapper {
+  height: 100%;
+  width: 15vw;
+  will-change: clip-path !important;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+
+  &:global(.inView) {
+    opacity: 1;
+    // clip-path: inset(0 0 0 0);
+  }
+}

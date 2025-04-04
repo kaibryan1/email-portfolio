@@ -1,0 +1,24 @@
+.gallery {
+  min-height: 30vh;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  position: relative;
+
+  & .vignette {
+    width: 15vw;
+    height: 30vh;
+    position: fixed;
+    // transform: translate(50% 50%);
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      scale: 1.4;
+    }
+  }
+}
+
+.vignetteWrapper {
+  position: relative;
+}

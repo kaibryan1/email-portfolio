@@ -1,0 +1,51 @@
+@use "../_abstracts/" as mix;
+
+:root {
+  --section-padding-sm: 40px;
+  --section-padding-md: 80px;
+  --section-padding-lg: 128px;
+}
+
+@mixin section-padding-lg {
+  padding-top: var(--section-padding-lg);
+  padding-bottom: var(--section-padding-lg);
+  @include mix.below(750px) {
+    padding-top: var(--section-padding-md);
+    padding-bottom: var(--section-padding-md);
+  }
+}
+
+@mixin section-padding-md {
+  padding-top: var(--section-padding-md);
+  padding-bottom: var(--section-padding-md);
+  @include mix.below(750px) {
+    padding-top: var(--section-padding-sm);
+    padding-bottom: var(--section-padding-sm);
+  }
+}
+
+.section {
+  width: 100%;
+  padding: 0 48px;
+
+  @include mix.below(750px) {
+    padding: 0 16px;
+  }
+}
+
+.section-padding-lg {
+  @include section-padding-lg;
+}
+
+.section-padding-md {
+  @include section-padding-md;
+}
+
+.container {
+  max-width: 1512px; //max-width
+  margin-inline: auto;
+
+  @media (max-width: 750px) {
+    // margin: 0 20px;
+  }
+}

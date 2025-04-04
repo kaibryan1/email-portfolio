@@ -1,0 +1,41 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.grid_row {
+  grid-row: 2;
+}
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero_wrapper {
+  margin-top: auto;
+}
+
+.heroImage {
+  min-width: 100px;
+  height: 350px;
+  grid-row: 1;
+  grid-column: 1/5;
+  background-color: var(--surface-primary-2);
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-radius: var(--border-radius-md);
+
+  @media (max-width: 750px) {
+    margin-top: var(--spacing-lg);
+    margin-bottom: 20px;
+    max-width: 200px;
+    max-height: 220px;
+  }
+
+  & img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+}

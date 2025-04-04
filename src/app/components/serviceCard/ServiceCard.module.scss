@@ -1,0 +1,131 @@
+@use "../../../styles/_abstracts/" as mix;
+
+:root {
+  --card-padding: 40px; // Spacing
+  --sticky-base: 12vh; // Base values for sticky positioning
+  // Calculated values for card reveal
+  --card-row-desktop: calc(
+    var(--font-size-h2-desktop) + (var(--card-padding) * 2)
+  );
+  --card-row-mobile: calc(var(--font-size-h2) + (var(--card-padding) * 2));
+  // Card reveal increments - how much of previous card to show
+  --reveal-increment-desktop: var(--card-row-desktop);
+  --reveal-increment-mobile: var(--card-row-mobile);
+
+  // Card spacing (distance between cards in normal scroll)
+  --card-spacing-base-desktop: 10rem; //18
+  --card-spacing-base-mobile: 13rem; //12
+  --card-spacing-decrement: 8rem; // 8 How much to reduce spacing for each subsequent card
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  //   padding-top: var(--spacing-2xl);
+  //   padding-bottom: var(--spacing-4xl);
+  padding-top: var(--card-padding);
+  padding-bottom: var(--card-padding);
+  background-color: var(--surface-page);
+
+  & {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--border-primary);
+      transform-origin: left center;
+    }
+  }
+
+  & {
+    &:nth-of-type(1) {
+      //   top: 15vh;
+      //   margin-bottom: 18rem;
+      top: var(--sticky-base);
+      margin-bottom: var(--card-spacing-base-desktop);
+      @media (max-width: 768px) {
+        margin-bottom: var(--card-spacing-base-mobile);
+      }
+    }
+    &:nth-of-type(2) {
+      //   top: calc(15vh + 9.5rem);
+      //   margin-bottom: 10rem;
+      top: calc(var(--sticky-base) + var(--reveal-increment-desktop));
+      margin-bottom: calc(
+        var(--card-spacing-base-desktop) - var(--card-spacing-decrement)
+      );
+
+      @media (max-width: 768px) {
+        top: calc(var(--sticky-base) + var(--reveal-increment-mobile) * 1.1);
+        margin-bottom: calc(
+          var(--card-spacing-base-mobile) - var(--card-spacing-decrement)
+        );
+      }
+    }
+    &:nth-of-type(3) {
+      //   top: calc(15vh + 20rem);
+      //   margin-bottom: 2rem;
+      top: calc(var(--sticky-base) + (var(--reveal-increment-desktop) * 2));
+      margin-bottom: calc(
+        var(--card-spacing-base-desktop) - (var(--card-spacing-decrement) * 2)
+      );
+
+      @media (max-width: 768px) {
+        top: calc(var(--sticky-base) + (var(--reveal-increment-mobile)));
+        margin-bottom: calc(
+          var(--card-spacing-base-mobile) -
+            (var(--card-spacing-decrement) * 1.65)
+        );
+      }
+    }
+  }
+
+  &_id,
+  &_title {
+    display: inline-block;
+    height: max-content;
+  }
+
+  &_title {
+    grid-column: 7/12;
+  }
+
+  &_body {
+    grid-column: 7/12;
+    margin-top: var(--spacing-2xl);
+    color: var(--text-body);
+
+    @media ((max-width: 750px)) {
+      & {
+        margin-top: var(--spacing-lg);
+      }
+    }
+
+    & > p {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    @media ((max-width: 750px)) {
+      & > p {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  &_tag {
+    height: max-content;
+    @include mix.above(750px) {
+      text-align: right;
+    }
+  }
+}
+
+.pillWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}

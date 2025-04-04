@@ -1,0 +1,66 @@
+// This file sets up mobile and desktop font size on screen width
+
+@use "../_abstracts/mixins" as mix;
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5 {
+//   transition: all 0.4s ease-in-out;
+// }
+
+// Headings
+h1,
+.h1 {
+  @include mix.heading-1-desktop;
+  @include mix.below(450px) {
+    @include mix.heading-1;
+  }
+
+  &.hovered {
+    color: var(--text-on-action);
+  }
+}
+
+h2,
+.h2 {
+  @include mix.heading-2-desktop;
+  @include mix.below(450px) {
+    @include mix.heading-2;
+  }
+}
+
+h3,
+.h3 {
+  @include mix.heading-3-desktop;
+  @include mix.below(450px) {
+    @include mix.heading-3;
+  }
+}
+
+h4,
+.h4 {
+  @include mix.heading-4-desktop;
+  @include mix.below(450px) {
+    @include mix.heading-4;
+  }
+  &.hovered {
+    color: var(--text-on-action) !important;
+  }
+}
+
+p {
+  @include mix.body-md; // Body font styling is set to be body-md
+  &.hovered {
+    color: var(--text-on-action) !important;
+  }
+}
+
+.body-sm {
+  @include mix.body-sm;
+}
+
+.label-sm {
+  @include mix.label-sm;
+}

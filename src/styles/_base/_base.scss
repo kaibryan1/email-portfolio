@@ -1,0 +1,35 @@
+// Global base class based stylings
+
+.descriptionWrapper {
+  grid-column: 1/13;
+  grid-row: 2 !important;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}

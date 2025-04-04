@@ -1,0 +1,30 @@
+@forward "../styles/_abstracts";
+@forward "../styles/_typography";
+@forward "../styles/_layout/_layout.scss";
+@forward "../styles/_layout/_grids.scss";
+@forward "../styles/_base/";
+
+:root {
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 800;
+}
+
+/* Tokens */
+@import "../styles/tokens/globalPrimitive.css";
+@import "../styles/tokens/neuePrimitive.css";
+@import "../styles/tokens/pixelPrimitive.css";
+@import "../styles/tokens/semantics.css";
+
+html,
+body {
+  max-width: 100vw;
+  background-color: var(--surface-page);
+}
+
+body {
+  font-family: var(--font-body), Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

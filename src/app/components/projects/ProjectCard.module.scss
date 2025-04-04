@@ -1,0 +1,40 @@
+.card {
+  grid-column: 1/7;
+
+  & {
+    &:nth-of-type(2) {
+      grid-column: 7/13;
+    }
+
+    & {
+      @media ((max-width: 750px)) {
+        &:nth-of-type(2) {
+          margin-top: (var(--spacing-5xl));
+        }
+      }
+    }
+  }
+
+  &_imageWrapper {
+    min-height: 70vh;
+    background-color: var(--surface-primary-2);
+
+    @media ((max-width: 750px)) {
+      min-height: 45vh;
+    }
+  }
+
+  &_details {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-flow: column-reverse;
+    margin-top: var(--spacing-md);
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.description {
+  & {
+    @include mix.below(450px) {
+      display: block;
+    }
+  }
+
+  &_tag {
+    grid-column: 7/8;
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-body);
+    & {
+      @include mix.label-sm;
+    }
+  }
+
+  &_body {
+    grid-column: 8/-2;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-body);
+    & {
+      @include mix.body-lg;
+      @include mix.below(450px) {
+        display: block;
+        margin-bottom: var(--spacing-sm);
+      }
+    }
+  }
+
+  // If it was array
+  &_array {
+    & p {
+      margin-bottom: var(--spacing-lg);
+    }
+  }
+}

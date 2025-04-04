@@ -1,0 +1,105 @@
+// All the mixins can be found in this file from reuseable mixins to typographic mixins
+// To use this file, just import this file from the UI component
+
+@mixin below($pixels) {
+  @media (max-width: ($pixels - 1)) {
+    @content;
+  }
+}
+
+@mixin above($pixels) {
+  @media (min-width: ($pixels + 1)) {
+    @content;
+  }
+}
+
+@mixin between($lower_pixel, $upper_pixel) {
+  @media (min-width: $lower_pixel) and (max-width: ($upper_pixel - 1)) {
+    @content;
+  }
+}
+
+@mixin heading-1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+@mixin heading-1-desktop {
+  font-size: var(--font-size-h1-desktop);
+  line-height: var(--line-height-h1-desktop);
+}
+
+@mixin heading-2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+@mixin heading-2-desktop {
+  font-size: var(--font-size-h2-desktop);
+  line-height: var(--line-height-h2-desktop);
+}
+
+@mixin heading-3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+@mixin heading-3-desktop {
+  font-size: var(--font-size-h3-desktop);
+  line-height: var(--line-height-h3-desktop);
+  font-weight: 600;
+}
+
+@mixin heading-4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+@mixin heading-4-desktop {
+  font-size: var(--font-size-h4-desktop);
+  line-height: var(--line-height-h4-desktop);
+}
+
+// Labels
+@mixin label-sm {
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-label-sm);
+  line-height: var(--line-height-label-sm);
+
+  @include above(750px) {
+    font-size: var(--font-size-label-sm-desktop);
+    line-height: var(--line-height-label-sm-desktop);
+  }
+}
+
+// Body Fonts
+@mixin body-sm {
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+
+  @include above(750px) {
+    font-size: var(--font-size-body-sm-desktop);
+    line-height: var(--line-height-body-sm-desktop);
+  }
+}
+
+@mixin body-md {
+  font-size: var(--font-size-body-md);
+  line-height: var(--line-height-body-md);
+
+  @include above(750px) {
+    font-size: var(--font-size-body-md-desktop);
+    line-height: var(--line-height-body-md-desktop);
+  }
+}
+
+@mixin body-lg {
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-body-lg);
+
+  @include above(750px) {
+    font-size: var(--font-size-body-lg-desktop);
+    line-height: var(--line-height-body-lg-desktop);
+  }
+}

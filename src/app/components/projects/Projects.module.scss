@@ -1,0 +1,16 @@
+.projectsWrapper {
+  margin-top: var(--spacing-3xl);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: calc(0px + var(--spacing-6xl) * -1);
+    left: 0px;
+    width: 100%;
+    height: var(--border-width-sm);
+    background-color: var(--border-primary);
+    // @media (max-width: 750px) {
+    //   bottom: calc(0px + var(--spacing-4xl) * -1);
+    // }
+  }
+}

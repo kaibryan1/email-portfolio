@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardContainer {
+  position: relative;
+  margin-top: var(--spacing-5xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

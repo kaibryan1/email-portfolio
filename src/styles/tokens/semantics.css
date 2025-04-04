@@ -1,0 +1,33 @@
+:root {
+  /* Text Color */
+  --text-heading: var(--neutral-black);
+  --text-heading-secondary: var(--neutral-300);
+  --text-body: var(--neutral-700);
+  --text-on-action: var(--primary-50);
+  --text-disabled: var(--neutral-300);
+  --text-on-disabled: var(--neutral-700);
+
+  /* Surface Color */
+  --surface-primary: var(--primary-500);
+  --surface-primary-2: var(--neutral-100);
+  --surface-action: var(--primary-800);
+  --surface-action-hover: var(--primary-50);
+
+  /* Page Color*/
+  --surface-page: var(--neutral-50);
+
+  /* Border Color */
+  --border-primary: var(--neutral-300);
+
+  /* Global Semantic Tokens */
+  /* Border Width */
+  --border-width-sm: var(--scale-25);
+  --border-width-md: var(--scale-50);
+  --border-width-lg: var(--scale-100);
+  /* Border Radius */
+  --border-radius-sm: var(--scale-50);
+  --border-radius-md: var(--scale-100);
+  --border-radius-lg: var(--scale-300);
+  --border-radius-xl: var(--scale-400);
+  --border-radius-rounded: 10000px;
+}

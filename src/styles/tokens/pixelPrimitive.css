@@ -1,0 +1,15 @@
+:root {
+  /* --font-primary: var(--jerysey10);
+  --font-secondary: var(--pixterGranular); */
+
+  --pixel-color-blue-500: #1c757d;
+
+  --pixel-color-grey-0: rgb(249, 255, 255);
+  --pixel-color-grey-50: rgb(241, 251, 251);
+  --pixel-color-grey-800: rgb(23, 28, 28);
+  --pixel-color-grey-1000: rgb(0, 18, 22);
+
+  /* Lineheights */
+  /* --pixel-line-height-h1: 10px;
+  --pixel-line-height-h1-lg: 50px; */
+}

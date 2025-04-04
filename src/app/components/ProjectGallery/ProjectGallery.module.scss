@@ -1,0 +1,47 @@
+.detailsWrapper {
+  position: relative;
+  background-color: rgba(0, 0, 255, 0.193);
+  margin-top: var(--spacing-6xl);
+  grid-column: 1/7;
+  @media (max-width: 750px) {
+    min-height: 50vh;
+  }
+}
+
+.detailsWrapper > div {
+  border: 2px solid red;
+  //   background-color: var(--surface-page);
+  min-height: 100vh;
+  top: 10vh;
+  display: flex;
+  justify-content: end;
+
+  @media (max-width: 750px) {
+    position: sticky;
+    top: 0;
+    min-width: 100%;
+    min-height: 50vh;
+  }
+}
+
+.galleryWrapper {
+  position: relative;
+  grid-column: 7/13;
+  margin-top: var(--spacing-6xl);
+  @media (max-width: 750px) {
+    z-index: 10;
+  }
+}
+
+.galleryWrapper :global(.gallery) {
+  min-height: 100vh;
+  @media (max-width: 750px) {
+    min-height: 50vh;
+  }
+
+  & :global(.vignette) {
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,38 @@
+@keyframes flickerMove {
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+  }
+  100% {
+    transform: translateX(500%);
+  }
+}
+
+.mail {
+  position: relative;
+  padding-bottom: var(--spacing-md);
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-primary);
+  }
+}
+
+.flicker {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  background-color: var(--surface-page);
+}

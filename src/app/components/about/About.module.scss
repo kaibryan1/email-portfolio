@@ -1,0 +1,38 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.about_image {
+  & :global(.tag) {
+    grid-column: 8/9;
+  }
+  & :global(.description) {
+    grid-column: 9/-1;
+  }
+}
+
+.imageWrapper {
+  grid-column: 1/7;
+  max-height: 70vh;
+  background-color: var(--surface-primary-2);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin-top: var(--spacing-6xl);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  @media (max-width: 750px) {
+    max-height: 45vh;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  & img {
+    width: auto;
+    height: 90%;
+    object-fit: cover;
+
+    @media (max-width: 750px) {
+      width: 90%;
+    }
+  }
+}
