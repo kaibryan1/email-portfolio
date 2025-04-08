@@ -1,0 +1,45 @@
+.themeSwitcher {
+  position: absolute;
+  z-index: 12;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  bottom: 0;
+  right: 0;
+  padding: 40px;
+
+  @media (max-width: 750px) {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+  }
+}
+
+.themeSwitch_wrapper {
+  width: 100%;
+}
+
+.switchContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--spacing-sm);
+  position: relative;
+  z-index: 12 !important;
+  width: 320px;
+
+  @media (max-width: 750px) {
+    width: 100% !important;
+  }
+}
+
+.overlay {
+  backdrop-filter: blur(4px);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ) !important; /* Semi-transparent black background */
+}

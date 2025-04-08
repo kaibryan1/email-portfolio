@@ -1,5 +1,5 @@
 import styles from "./Tag.module.scss";
-
+import SplitPara from "@/app/animation/split/SplitPara";
 export default function Tag({
   label,
   type,

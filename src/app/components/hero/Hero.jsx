@@ -5,6 +5,8 @@ import styles from "./Hero.module.scss";
 import Image from "next/image";
 import Title from "../title/Title"; //Title Component
 import Description from "../description/Description"; //Description
+import ImageMask from "@/app/animation/ImageMask/ImageMask"; //Image Mask Animation
+import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 
 // Data
 import { _HERO } from "@/_data/_HERO";
@@ -23,9 +25,8 @@ export default function Hero() {
             <Title firstLine={firstTitle} secondLine={secondTitle} />
           </div>
           <div className={`${styles.grid_row} grid-desktop`}>
-            {/* <img src="" alt="" /> */}
             <Description tag={tag} body={body} />
-            <div className={styles.heroImage}>
+            <ImageMask className={styles.heroImage}>
               <Image
                 src={`/images/about/${heroImage}`}
                 alt="Hero Image"
@@ -33,9 +34,10 @@ export default function Hero() {
                 height={1000}
                 className={styles.image}
               ></Image>
-            </div>
+            </ImageMask>
           </div>
         </div>
+        <ThemeSwitcher></ThemeSwitcher>
       </div>
     </section>
   );

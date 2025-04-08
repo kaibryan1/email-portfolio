@@ -1,0 +1,18 @@
+.curveWrapper {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.svgCurve {
+  position: absolute;
+  top: 0;
+  left: 0; // Start from screen edge
+  width: 100px;
+  height: 100vh;
+  fill: var(--surface-page);
+  pointer-events: none; // Prevent blocking clicks if needed
+  z-index: 1000;
+}

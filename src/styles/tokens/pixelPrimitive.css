@@ -1,15 +1,75 @@
 :root {
-  /* --font-primary: var(--jerysey10);
-  --font-secondary: var(--pixterGranular); */
+  /* Brand -> Primary */
+  --pixel-color-brand-50: #f7fafc;
+  --pixel-color-brand-100: #e5ebec;
+  --pixel-color-brand-300: #c9d6d5;
+  --pixel-color-brand-500: #adbfc0;
+  --pixel-color-brand-700: #6a7b7d;
+  --pixel-color-brand-800: #292e30;
 
-  --pixel-color-blue-500: #1c757d;
+  /* Grey -> Neutrals*/
+  --pixel-color-grey-50: #f9fafaff;
+  --pixel-color-grey-100: #dedfdf;
+  --pixel-color-grey-300: #b7b9b9;
+  --pixel-color-grey-500: #909493;
+  --pixel-color-grey-700: #5e6060;
+  --pixel-color-grey-800: #1c1f1fff;
+  --pixel-color-grey-0: #ffffffff;
+  --pixel-color-grey-1000: #00080aff;
 
-  --pixel-color-grey-0: rgb(249, 255, 255);
-  --pixel-color-grey-50: rgb(241, 251, 251);
-  --pixel-color-grey-800: rgb(23, 28, 28);
-  --pixel-color-grey-1000: rgb(0, 18, 22);
+  /* Font Family */
+  --pixel-font-primary: var(--jersey10);
+  --pixel-font-secondary: var(--pixterGranular);
 
-  /* Lineheights */
-  /* --pixel-line-height-h1: 10px;
-  --pixel-line-height-h1-lg: 50px; */
+  /* Heading Type Scale */
+  --pixel-font-size-h1: 52px;
+  --pixel-font-size-h1-desktop: 84px;
+  --pixel-font-size-h2: 32px;
+  --pixel-font-size-h2-desktop: 56px;
+  --pixel-font-size-h3: 28px;
+  --pixel-font-size-h3-desktop: 32px;
+  --pixel-font-size-h4: 24px;
+  --pixel-font-size-h4-desktop: 28px;
+
+  /* Body Type Scale */
+  --pixel-font-size-body-sm: 14px;
+  --pixel-font-size-body-sm-desktop: 16px;
+  --pixel-font-size-body-md: 16px;
+  --pixel-font-size-body-md-desktop: 20px;
+  --pixel-font-size-body-lg: 20px;
+  --pixel-font-size-body-lg-desktop: 24px;
+
+  /* Label Type Scale */
+  --pixel-font-size-label-sm: 14px;
+  --pixel-font-size-label-sm-desktop: 14px;
+  --pixel-font-size-label-md: 14px;
+  --pixel-font-size-label-md-desktop: 16px;
+
+  /* Headings Line Height */
+  --pixel-line-height-h1: 40px;
+  --pixel-line-height-h1-desktop: 68px;
+  --pixel-line-height-h2: 40px;
+  --pixel-line-height-h2-desktop: 64px;
+  --pixel-line-height-h3: 32px;
+  --pixel-line-height-h3-desktop: 40px;
+  --pixel-line-height-h4: 28px;
+  --pixel-line-height-h4-desktop: 36px;
+
+  /* Body Line Heights */
+  --pixel-line-height-body-sm: 16px;
+  --pixel-line-height-body-sm-desktop: 20px;
+  --pixel-line-height-body-md: 20px;
+  --pixel-line-height-body-md-desktop: 24px;
+  --pixel-line-height-body-lg: 24px;
+  --pixel-line-height-body-lg-desktop: 30px;
+
+  /* Label Line Heights */
+  --pixel-line-height-label-sm: 14px;
+  --pixel-line-height-label-sm-desktop: 16px;
+  --pixel-line-height-label-md: 16px;
+  --pixel-line-height-label-md-desktop: 20px;
+
+  /* Scale */
+  /* --pixel-scale-25: 1px;
+  --pixel-scale-1800: 100px; */
 }

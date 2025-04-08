@@ -3,17 +3,11 @@
 .navbar {
   height: 100px;
   padding-top: var(--spacing-lg);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(-100%);
-  opacity: 0;
-
-  &.visible {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  will-change: transform;
 }
 
 // Logo
@@ -30,6 +24,9 @@
   }
 
   @media (max-width: 750px) {
+    width: 32px;
+    height: 32px;
+    margin-inline: var(--spacing-sm);
     margin-bottom: var(--spacing-lg);
   }
 }

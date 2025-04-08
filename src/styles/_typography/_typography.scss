@@ -45,22 +45,27 @@ h4,
   @include mix.below(450px) {
     @include mix.heading-4;
   }
+}
+
+p {
+  // @include mix.body-md; // This caused error
   &.hovered {
     color: var(--text-on-action) !important;
   }
 }
 
-p {
-  @include mix.body-md; // Body font styling is set to be body-md
-  &.hovered {
-    color: var(--text-on-action) !important;
-  }
+.label-sm {
+  @include mix.label-sm;
 }
 
 .body-sm {
   @include mix.body-sm;
 }
 
-.label-sm {
-  @include mix.label-sm;
+.body-md {
+  @include mix.body-md;
+}
+
+.body-lg {
+  @include mix.body-lg;
 }

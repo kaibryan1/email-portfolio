@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import styles from "./Services.module.scss";
 import Title from "../title/Title"; //Title Compo
 import Description from "../description/Description"; //Description Compo

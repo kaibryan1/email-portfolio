@@ -10,7 +10,7 @@ export default function NavListItems({ navList }) {
     setMouseY(event.clientY);
   };
   return (
-    <ul className={styles.navListItems}>
+    <ul className={`navList ${styles.navListItems}`}>
       {navList.map((item) => {
         return (
           <NavItem

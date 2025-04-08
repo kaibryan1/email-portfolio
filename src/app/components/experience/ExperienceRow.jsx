@@ -4,11 +4,14 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import useWindowWidth from "@/utils/useWindowWidth";
 import styles from "./ExperienceRow.module.scss";
 import Tag from "../tag/Tag"; //Tag Compo
 
 export default function ExperienceRow({ data, isActive, onEnter, onLeave }) {
   const itemRef = useRef(null);
+  const { width } = useWindowWidth();
+  const isMobile = width < 750;
 
   // Animation Effect
   useEffect(() => {
@@ -20,8 +23,8 @@ export default function ExperienceRow({ data, isActive, onEnter, onLeave }) {
         gsap.to(el, {
           scrollTrigger: {
             trigger: el,
-            start: "top 60%",
-            end: "bottom 55%",
+            start: `top ${isMobile ? "40%" : "60%"}`,
+            end: `bottom ${isMobile ? "40%" : "55%"}`,
             toggleClass: { targets: el, className: styles.hovered },
           },
         });

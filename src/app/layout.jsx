@@ -3,12 +3,13 @@ import "./globals.scss";
 import { Manrope, Reddit_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "./store/ThemeProvider";
+import Header from "./components/header/Header";
 
 // Pixel Fonts
 const jersery10 = localFont({
   src: "../../public/fonts/pixel/Jersey10.ttf",
   display: "swap",
-  variable: "--jerysey10",
+  variable: "--jersey10",
 });
 
 const pixterGranular = localFont({
@@ -40,7 +41,10 @@ export default function RootLayout({ children }) {
         lang="en"
         className={`${jersery10.variable} ${pixterGranular.variable} ${manrope.variable} ${redditMono.variable}`}
       >
-        <body>{children}</body>
+        <body>
+          <Header />
+          {children}
+        </body>
       </html>
     </ThemeProvider>
   );

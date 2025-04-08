@@ -1,8 +1,11 @@
+"use client";
+
 import styles from "./Navbar.module.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import NavListItems from "../navListItems/NavListItems";
-import TimeCode from "../timecode/TimeCode";
+import { motion, AnimatePresence, easeOut } from "framer-motion";
+import NavListItems from "../navListItems/NavListItems"; //Nav List
+import TimeCode from "../timecode/TimeCode"; //Time Code
 
 // Data
 import { _NAVBAR } from "@/_data/_NAVBAR";
@@ -15,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY <= 100) {
+      if (window.scrollY <= 60) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -27,10 +30,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`${styles.navbar} ${isVisible ? styles.visible : ""} section`}
-    >
-      <div className={`container grid-desktop`}>
+    <nav className={`${styles.navbar} section`}>
+      <motion.div
+        className={`container grid-desktop`}
+        initial={{ opacity: 1 }}
+        animate={{
+          opacity: 1,
+          transition: { duration: 0.3, ease: easeOut },
+        }}
+        exit={{ opacity: 1 }}
+      >
         <div className={styles.logo}>
           <Image
             src={`/images/logo/${logo_pixel}.png`}
@@ -45,7 +54,7 @@ export default function Navbar() {
         <div className={styles.navListWrapper}>
           <NavListItems navList={navList} />
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 }

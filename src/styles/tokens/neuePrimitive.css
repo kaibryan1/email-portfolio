@@ -35,23 +35,23 @@
   --neue-font-size-body-sm: 14px;
   --neue-font-size-body-sm-desktop: 16px;
   --neue-font-size-body-md: 16px;
-  --neue-font-size-body-md-desktop: 20px;
+  --neue-font-size-body-md-desktop: 18px;
   --neue-font-size-body-lg: 20px;
-  --neue-font-size-body-lg-desktop: 24px;
+  --neue-font-size-body-lg-desktop: 22px;
 
   /* Label Type Scale */
   --neue-font-size-label-sm: 12px;
   --neue-font-size-label-sm-desktop: 12px;
 
   /* Headings Line Height */
-  --neue-line-height-h1: 44px;
+  --neue-line-height-h1: 48px;
   --neue-line-height-h1-desktop: 68px;
   --neue-line-height-h2: 40px;
   --neue-line-height-h2-desktop: 64px;
   --neue-line-height-h3: 32px;
   --neue-line-height-h3-desktop: 40px;
   --neue-line-height-h4: 28px;
-  --neue-line-height-h4-desktop: 32px;
+  --neue-line-height-h4-desktop: 36px;
 
   /* Body Line Heights */
   --neue-line-height-body-sm: 16px;
@@ -59,7 +59,7 @@
   --neue-line-height-body-md: 20px;
   --neue-line-height-body-md-desktop: 24px;
   --neue-line-height-body-lg: 24px;
-  --neue-line-height-body-lg-desktop: 32px;
+  --neue-line-height-body-lg-desktop: 28px;
 
   /* Label Line Heights */
   --neue-line-height-label-sm: 16px;
@@ -67,16 +67,5 @@
 
   /* Scale */
   /* --neue-scale-25: 1px;
-  --neue-scale-50: 2px;
-  --neue-scale-100: 4px;
-  --neue-scale-150: 6px;
-  --neue-scale-200: 8px;
-  --neue-scale-400: 16px;
-  --neue-scale-600: 24px;
-  --neue-scale-800: 32px;
-  --neue-scale-1000: 40px;
-  --neue-scale-1200: 48px;
-  --neue-scale-1600: 64px;
-  --neue-scale-1700: 80px;
   --neue-scale-1800: 100px; */
 }

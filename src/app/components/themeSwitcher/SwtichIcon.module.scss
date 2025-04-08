@@ -1,0 +1,65 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.switchIcon {
+  background-color: var(--surface-action);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  margin-left: auto;
+  margin-top: var(--spacing-sm);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 12 !important;
+}
+
+.switchIcon,
+.labelWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: max-content;
+}
+
+.labelWrapper {
+  align-items: center;
+  overflow: hidden;
+}
+
+.iconsMask {
+  height: 24px;
+}
+
+.iconsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  padding: 0px;
+  margin: 0px;
+
+  & div {
+    overflow: hidden;
+  }
+
+  svg {
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+.label {
+  transform-origin: right bottom;
+  color: var(--text-on-action);
+  & p {
+    white-space: nowrap;
+    @include mix.label-sm;
+  }
+}
+
+.icon_stroke {
+  stroke: var(--text-on-action);
+}
+
+.icon_fill {
+  fill: var(--text-on-action);
+}

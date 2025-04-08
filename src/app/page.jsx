@@ -1,8 +1,6 @@
 "use client";
+import { useEffect } from "react";
 
-import Image from "next/image";
-
-import ThemeSwitcher from "./components/ThemeSwitcher";
 import { SmoothScrollProvider } from "@/utils/SmoothScroll";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
@@ -13,10 +11,14 @@ import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 
 export default function Home() {
+  useEffect(() => {
+    document.body.style.opacity = "1";
+  }, []);
   return (
     <SmoothScrollProvider>
       <section>
         <Navbar />
+        {/* <Menu /> */}
         <Hero />
         <Services />
         <Projects />

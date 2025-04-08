@@ -62,6 +62,7 @@
 
 // Labels
 @mixin label-sm {
+  text-transform: uppercase;
   font-family: var(--font-tertiary);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-label-sm);
@@ -70,6 +71,19 @@
   @include above(750px) {
     font-size: var(--font-size-label-sm-desktop);
     line-height: var(--line-height-label-sm-desktop);
+  }
+}
+
+@mixin label-md {
+  text-transform: uppercase;
+  font-family: var(--font-tertiary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-label-md);
+  line-height: var(--line-height-label-md);
+
+  @include above(750px) {
+    font-size: var(--font-size-label-md-desktop);
+    line-height: var(--line-height-label-md-desktop);
   }
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Description.module.scss";
 import Tag from "../tag/Tag"; //Tag Compo
+import SplitPara from "@/app/animation/split/SplitPara";
 
 export default function Description({ tag, body }) {
   return (
@@ -9,7 +10,7 @@ export default function Description({ tag, body }) {
         <Tag label={tag} type="normal" />
       </div>
       {Array.isArray(body) ? (
-        <div
+        <SplitPara
           className={`description ${styles.description_body} ${styles.description_array}`}
         >
           {body.map((para, i) => {
@@ -20,9 +21,11 @@ export default function Description({ tag, body }) {
             );
           })}
           <br />
-        </div>
+        </SplitPara>
       ) : (
-        <p className={`description ${styles.description_body}`}>{body}</p>
+        <SplitPara className={`description ${styles.description_body}`}>
+          <p>{body}</p>
+        </SplitPara>
       )}
     </>
   );

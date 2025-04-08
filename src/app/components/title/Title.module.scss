@@ -10,7 +10,13 @@
   }
 
   &_leftAligned {
+    color: var(--text-heading);
     text-align: left;
+    @include mix.heading-1-desktop;
+
+    @include mix.below(450px) {
+      @include mix.heading-1;
+    }
   }
 
   &_rightAligned {

@@ -1,0 +1,76 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.switchWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing-sm);
+  border: var(--border-width-sm) solid var(--border-primary);
+  background-color: var(--surface-page);
+
+  @media (max-width: 750px) {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  &:hover {
+    & .details p {
+      color: var(--text-on-action) !important;
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  z-index: 2 !important;
+  min-width: 64px;
+  height: 48px;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.details {
+  position: relative;
+  z-index: 2 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing-2xs);
+
+  & p {
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  & .body {
+    color: var(--text-body);
+    @include mix.body-sm;
+  }
+}
+
+.shader {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--surface-action);
+}

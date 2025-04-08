@@ -23,7 +23,7 @@ export default function Projects() {
       </div>
       <div className={`container grid-desktop ${styles.projectsWrapper}`}>
         {projects.map((project, index) => {
-          return <ProjectCard data={project} key={index} />;
+          return <ProjectCard data={project} key={index} index={index} />;
         })}
       </div>
     </section>

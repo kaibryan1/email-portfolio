@@ -3,6 +3,7 @@ import styles from "./About.module.scss";
 import Image from "next/image";
 import Title from "../title/Title";
 import Description from "../description/Description";
+import ImageMask from "@/app/animation/ImageMask/ImageMask";
 
 // Data
 import { _ABOUT } from "@/_data/_ABOUT";
@@ -20,14 +21,14 @@ export default function About() {
         <Title firstLine={firstLine} secondLine={secondLine}></Title>
       </div>
       <div className={`container grid-desktop ${styles.about_image}`}>
-        <div className={styles.imageWrapper}>
+        <ImageMask className={styles.imageWrapper} start="top 60%">
           <Image
             src={`/images/about/${handle}.png`}
             alt={alt}
             width="500"
             height="500"
           ></Image>
-        </div>
+        </ImageMask>
         <Description tag={tag} body={body} />
       </div>
     </section>

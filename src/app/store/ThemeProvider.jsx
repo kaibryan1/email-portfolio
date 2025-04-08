@@ -19,6 +19,11 @@ export const ThemeProvider = ({ children }) => {
 
   // Update CSS variables on theme or mode change
   useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") || "neue";
+    if (storedTheme) {
+      setThemeName(storedTheme); // Set theme from localStorage if it exists
+    }
+
     const selectedAlias = themes[themeName].alias;
     const selectedTokens = themes[themeName][mode];
     if (selectedTokens && selectedAlias) {

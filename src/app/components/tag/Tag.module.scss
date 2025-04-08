@@ -4,12 +4,13 @@
   text-transform: uppercase;
   width: max-content !important;
   display: inline-block;
-  margin-top: 8px !important;
+  margin-top: 8px;
   border: "none";
   border-radius: "none";
   padding: "none";
   color: var(--text-body);
   transition: all 0.4s ease-out;
+  font-size: 12px;
   @include mix.label-sm;
 
   &.hovered {

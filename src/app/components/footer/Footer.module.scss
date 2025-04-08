@@ -1,5 +1,17 @@
 .section_footer {
   padding-bottom: 0px !important;
+  position: relative;
+  z-index: 9;
+  background-color: var(--surface-page);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.section_wrapper {
+  width: 100%;
 }
 
 .footer_title {
@@ -42,5 +54,9 @@
     width: 100%;
     height: 100%;
     transform: translateY(15%);
+
+    & path {
+      fill: var(--text-heading);
+    }
   }
 }

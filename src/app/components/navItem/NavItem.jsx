@@ -1,9 +1,19 @@
+"use client";
+
 import styles from "./NavItem.module.scss";
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useTheme } from "@/app/store/ThemeProvider";
 
 export default function NavItem({ label, id, isActive, setIsActive, mouseY }) {
   const itemRef = useRef(null);
+  const labelRef = useRef(null);
+  const isInView = useInView(itemRef);
+  const { themeName, mode, updateTheme } = useTheme();
+
   const backDropRef = useRef(null);
   const [enterDirection, setEnterDirection] = useState("top");
 
@@ -25,22 +35,47 @@ export default function NavItem({ label, id, isActive, setIsActive, mouseY }) {
     setEnterDirection(slideDirection);
     setIsActive(null);
   };
+
+  useEffect(() => {
+    if (!itemRef.current) return;
+
+    gsap.set(itemRef.current, { clipPath: "inset(0% 100% 0% 0%)" });
+    // Reveal Animation
+    gsap.to(itemRef.current, {
+      clipPath: "inset(0% 0% 0% 0%)",
+      ease: "power2.out",
+      delay: 0.1 * id,
+      scrollTrigger: {
+        trigger: itemRef.current,
+        duration: 1.2,
+        start: "top 90%",
+        ease: "power3.out",
+      },
+    });
+  }, []);
+
   return (
     <li
       ref={itemRef}
-      className={styles.navItem}
+      className={`navItem ${themeName} ${styles.navItem} ${
+        isInView ? styles.visible : ""
+      } ${styles[themeName]}`}
       onMouseEnter={(event) => handleMouseEnter(event)}
       onMouseLeave={(event) => handleMouseLeave(event)}
     >
-      <p
-        className={`${styles.navItem_label} ${isActive ? styles.hovered : ""}`}
-      >
-        {label}
-      </p>
-      <div className={styles.navItem_backdrop}></div>
+      <div className="wrap_line">
+        <p
+          ref={labelRef}
+          className={`${styles.navItem_label} ${
+            isActive ? styles.hovered : ""
+          } ${styles[themeName]} ${themeName}`}
+        >
+          {label}
+        </p>
+      </div>
       <motion.span
         ref={backDropRef}
-        className={styles.backDrop}
+        className={`backdrop ${styles.backDrop}`}
         initial={{ y: enterDirection === "top" ? "-100%" : "100%" }}
         animate={{
           y: isActive ? "0%" : enterDirection === "top" ? "-100%" : "100%",

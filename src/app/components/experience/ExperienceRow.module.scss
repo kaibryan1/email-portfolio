@@ -81,7 +81,7 @@
     }
 
     & p {
-      color: var(--text-body);
+      color: var(--text-disabled);
       max-width: 30vw;
 
       @media (max-width: 750px) {
