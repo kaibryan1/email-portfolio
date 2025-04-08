@@ -1,12 +1,13 @@
 @use "../../../styles/_abstracts/" as mix;
 .menu {
+  max-height: 100vh;
   height: 100vh;
   background-color: var(--surface-page);
   position: fixed;
   z-index: 98;
   right: 0;
   top: 0;
-  color: white;
+  color: var(--surface-page);
   padding-inline: 16px;
   padding-top: var(--spacing-3xl);
   padding-bottom: var(--spacing-md);
@@ -21,7 +22,7 @@
 
   :global(.navItem) {
     min-width: 35vw;
-    padding: var(--spacing-lg) 0px var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-md) 0px var(--spacing-md) var(--spacing-sm);
 
     @media (max-width: 750px) {
       min-width: 100%;

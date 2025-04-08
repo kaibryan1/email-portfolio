@@ -24,10 +24,10 @@
   /* Heading Type Scale */
   --pixel-font-size-h1: 52px;
   --pixel-font-size-h1-desktop: 84px;
-  --pixel-font-size-h2: 32px;
-  --pixel-font-size-h2-desktop: 56px;
+  --pixel-font-size-h2: 40px;
+  --pixel-font-size-h2-desktop: 64px;
   --pixel-font-size-h3: 28px;
-  --pixel-font-size-h3-desktop: 32px;
+  --pixel-font-size-h3-desktop: 36px;
   --pixel-font-size-h4: 24px;
   --pixel-font-size-h4-desktop: 28px;
 
@@ -41,15 +41,15 @@
 
   /* Label Type Scale */
   --pixel-font-size-label-sm: 14px;
-  --pixel-font-size-label-sm-desktop: 14px;
-  --pixel-font-size-label-md: 14px;
-  --pixel-font-size-label-md-desktop: 16px;
+  --pixel-font-size-label-sm-desktop: 16px;
+  --pixel-font-size-label-md: 16px;
+  --pixel-font-size-label-md-desktop: 18px;
 
   /* Headings Line Height */
   --pixel-line-height-h1: 40px;
   --pixel-line-height-h1-desktop: 68px;
-  --pixel-line-height-h2: 40px;
-  --pixel-line-height-h2-desktop: 64px;
+  --pixel-line-height-h2: 44px;
+  --pixel-line-height-h2-desktop: 68px;
   --pixel-line-height-h3: 32px;
   --pixel-line-height-h3-desktop: 40px;
   --pixel-line-height-h4: 28px;
@@ -65,9 +65,9 @@
 
   /* Label Line Heights */
   --pixel-line-height-label-sm: 14px;
-  --pixel-line-height-label-sm-desktop: 16px;
+  --pixel-line-height-label-sm-desktop: 20px;
   --pixel-line-height-label-md: 16px;
-  --pixel-line-height-label-md-desktop: 20px;
+  --pixel-line-height-label-md-desktop: 24px;
 
   /* Scale */
   /* --pixel-scale-25: 1px;

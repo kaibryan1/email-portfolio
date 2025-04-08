@@ -20,6 +20,8 @@ export default function ThemeSwitch({
   const detailsRef = useRef(null);
 
   useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    setActiveIndex(storedTheme);
     if (!shader.current && !detailsRef.current) return;
 
     gsap.set(shader.current, {
@@ -73,7 +75,7 @@ export default function ThemeSwitch({
         </div>
         {/* Details */}
         <div ref={detailsRef} className={styles.details}>
-          <Tag>{title}</Tag>
+          <Tag className={styles.tag}>{title}</Tag>
           <p className={styles.body}>{body}</p>
         </div>
         {/* Shader */}

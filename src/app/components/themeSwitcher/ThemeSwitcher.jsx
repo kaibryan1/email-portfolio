@@ -58,7 +58,7 @@ export default function ThemeSwitcher() {
           <motion.div
             className={`overlay ${styles.overlay}`}
             onClick={() => setIsActive(!isActive)}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", zIndex: 9 }}
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,

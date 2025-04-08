@@ -6,7 +6,6 @@ import Image from "next/image";
 import Title from "../title/Title"; //Title Component
 import Description from "../description/Description"; //Description
 import ImageMask from "@/app/animation/ImageMask/ImageMask"; //Image Mask Animation
-import ThemeSwitcher from "../themeSwitcher/ThemeSwitcher";
 
 // Data
 import { _HERO } from "@/_data/_HERO";
@@ -37,7 +36,6 @@ export default function Hero() {
             </ImageMask>
           </div>
         </div>
-        <ThemeSwitcher></ThemeSwitcher>
       </div>
     </section>
   );

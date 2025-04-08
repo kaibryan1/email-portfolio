@@ -49,9 +49,11 @@
   z-index: 2 !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: var(--spacing-2xs);
+  gap: var(--spacing-xs);
+
+  @media (max-width: 750px) {
+    gap: var(--spacing-sm);
+  }
 
   & p {
     overflow: hidden;
@@ -59,9 +61,21 @@
     margin: 0 !important;
   }
 
+  & .tag {
+    font-family: var(--reddit-mono) !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+
   & .body {
     color: var(--text-body);
-    @include mix.body-sm;
+    font-size: 14px;
+    line-height: 16px !important;
+    font-weight: var(--font-weight-medium) !important;
+
+    & {
+      font-family: var(--manrope) !important;
+    }
   }
 }
 

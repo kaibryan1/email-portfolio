@@ -2,12 +2,12 @@
 
 .navbar {
   height: 100px;
-  padding-top: var(--spacing-lg);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   will-change: transform;
+  margin-top: var(--spacing-lg) !important;
 }
 
 // Logo

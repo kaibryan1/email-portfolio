@@ -26,7 +26,7 @@ export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
       scrollTrigger: {
         trigger: switchRef.current,
         duration: 1.8,
-        start: "top 45%",
+        start: "top 70%",
         toggleActions: "play none none reverse",
       },
     });

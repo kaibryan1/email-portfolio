@@ -1,6 +1,7 @@
 .themeSwitcher {
-  position: absolute;
+  position: fixed;
   z-index: 12;
+  pointer-events: none;
   min-width: 280px;
   display: flex;
   flex-direction: column;
@@ -9,6 +10,10 @@
   bottom: 0;
   right: 0;
   padding: 40px;
+
+  & * {
+    pointer-events: auto !important;
+  }
 
   @media (max-width: 750px) {
     width: 100%;

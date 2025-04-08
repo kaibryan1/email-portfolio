@@ -15,7 +15,7 @@ export default function Header() {
           <motion.div
             className="overlay"
             onClick={() => setIsActive(!isActive)}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", zIndex: 9 }}
             initial={{ opacity: 0 }}
             animate={{
               opacity: 0.6,

@@ -3,6 +3,7 @@ import "./globals.scss";
 import { Manrope, Reddit_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "./store/ThemeProvider";
+import ThemeSwitcher from "./components/themeSwitcher/ThemeSwitcher";
 import Header from "./components/header/Header";
 
 // Pixel Fonts
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
       >
         <body>
           <Header />
+          <ThemeSwitcher />
           {children}
         </body>
       </html>

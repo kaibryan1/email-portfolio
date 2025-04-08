@@ -17,6 +17,7 @@
   z-index: 1;
   cursor: pointer;
   color: var(--text-heading);
+  padding-left: var(--spacing-sm);
 
   &::after {
     content: "";
