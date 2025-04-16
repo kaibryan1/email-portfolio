@@ -40,11 +40,12 @@
 }
 
 .overlay {
+  z-index: 98;
   backdrop-filter: blur(4px);
   background-color: rgba(
     0,
     0,
     0,
-    0.4
+    0.3
   ) !important; /* Semi-transparent black background */
 }

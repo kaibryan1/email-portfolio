@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Vignette.module.scss";
 import Image from "next/image";
 import gsap from "gsap";
@@ -10,7 +12,7 @@ export default function Vignette({ handle }) {
       <div className={styles.vignetteWrapper}>
         <div className={`vignette ${styles.vignette}`}>
           <Image
-            src={`/images/experiences/${handle}.jpg`}
+            src={`/images/experiences/${handle}`}
             alt="image"
             width={1000}
             height={1000}

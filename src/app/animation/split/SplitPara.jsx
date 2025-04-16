@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SplitPara({ children, className, ...props }) {
+export default function SplitPara({ children, className, delay, ...props }) {
   const containerRef = useRef(null);
   const targetElements = useRef([]);
 
@@ -34,6 +34,7 @@ export default function SplitPara({ children, className, ...props }) {
         duration: 0.8,
         ease: "power3.out",
         stagger: 0.02,
+        delay: delay || 0,
         scrollTrigger: {
           trigger: el,
           start: "top 80%",

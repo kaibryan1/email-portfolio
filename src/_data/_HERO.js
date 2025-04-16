@@ -5,7 +5,7 @@ export const _HERO = {
   },
   subtitle: {
     tag: "[EXPERTISE]",
-    body: "As a passionate creative digital product & web designer, I love helping business grow through user centric, design and digital solutions.",
+    body: "I help ambitious startups and premium brands gain a competitive edge through high-performing websites that deliver exceptional user experience.",
   },
   images: {
     hero: {

@@ -27,6 +27,7 @@ export default function Experience() {
 
   return (
     <section
+      id="section_resume"
       className={`section section-padding-lg ${styles.section_experience}`}
     >
       <div className={`container grid-desktop`}>

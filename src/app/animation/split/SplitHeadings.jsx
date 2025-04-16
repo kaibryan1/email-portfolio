@@ -8,7 +8,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SplitHeadings({ children, className, ...props }) {
+export default function SplitHeadings({
+  children,
+  delay,
+  className,
+  start,
+  ...props
+}) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -34,9 +40,10 @@ export default function SplitHeadings({ children, className, ...props }) {
         duration: 1.4,
         ease: "power3.out",
         stagger: 0.01 * i,
+        delay: delay || 0,
         scrollTrigger: {
           trigger: el,
-          start: "top 80%",
+          start: start || "top 80%",
           toggleActions: "play none none none",
         },
       });

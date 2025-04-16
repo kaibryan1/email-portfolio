@@ -1,20 +1,21 @@
 :root {
   /* Text Color */
-  --text-heading: var(--neutral-black);
-  --text-heading-secondary: var(--neutral-300);
-  --text-body: var(--neutral-700);
+  --text-heading: var(--primary-800);
+  --text-heading-secondary: var(--primary-500);
+  --text-body: var(--primary-700);
   --text-on-action: var(--primary-50);
+  --text-action-hover: var(--primary-50);
   --text-disabled: var(--neutral-300);
   --text-on-disabled: var(--neutral-700);
 
   /* Surface Color */
   --surface-primary: var(--primary-500);
   --surface-primary-2: var(--neutral-100);
-  --surface-action: var(--primary-800);
-  --surface-action-hover: var(--primary-50);
+  --surface-action: var(--primary-700);
+  --surface-action-hover: var(--primary-800);
 
   /* Page Color*/
-  --surface-page: var(--neutral-50);
+  --surface-page: var(--primary-50);
   --surface-page-invert: var(--neutral-800);
 
   /* Border Color */
@@ -31,4 +32,13 @@
   --border-radius-lg: var(--scale-300);
   --border-radius-xl: var(--scale-400);
   --border-radius-rounded: 10000px;
+}
+
+/* Tokens Overrides For Specific Brand Tokens */
+/* Example => One theme uses --surface-page = --neutral-50 but the other theme wants to use another color */
+html[data-theme="pixel"] {
+  --surface-page: var(--primary-50);
+  --surface-action: var(--primary-500);
+  --text-body: var(--neutral-800);
+  --text-heading-secondary: var(--primary-300);
 }

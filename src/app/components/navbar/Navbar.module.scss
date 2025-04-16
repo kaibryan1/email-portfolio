@@ -1,13 +1,29 @@
 @use "../../../styles/_abstracts/" as mix;
 
 .navbar {
-  height: 100px;
-  position: absolute;
+  position: relative;
+  z-index: 97;
   top: 0;
   left: 0;
   width: 100%;
   will-change: transform;
   margin-top: var(--spacing-lg) !important;
+}
+
+.logo_wrapper {
+  grid-column: 1/4;
+  width: max-content;
+  height: max-content;
+  display: inline-block;
+
+  & .typemark {
+    & p {
+      font-family: var(--font-body);
+      font-size: var(--font-size-body-sm);
+      color: var(--text-heading);
+      font-weight: 700;
+    }
+  }
 }
 
 // Logo
@@ -39,8 +55,16 @@
 
   @include mix.below(750px) {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    text-align: end;
+    top: 0px;
+    right: 16px;
+    width: max-content;
+    height: max-content;
+
+    & p {
+      margin-top: 0px !important;
+      padding: 0px !important;
+    }
   }
 }
 

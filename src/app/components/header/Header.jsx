@@ -5,11 +5,13 @@ import styles from "./Header.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import MenuIcon from "../menu/MenuIcon";
 import Menu from "../menu/Menu";
+import Navbar from "../navbar/Navbar";
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
   return (
-    <header>
+    <header className={styles.section_header}>
+      <Navbar />
       <AnimatePresence>
         {isActive && (
           <motion.div

@@ -1,5 +1,5 @@
 .projectsWrapper {
-  margin-top: var(--spacing-3xl);
+  margin-top: var(--spacing-6xl);
   position: relative;
   &::after {
     content: "";
@@ -9,8 +9,9 @@
     width: 100%;
     height: var(--border-width-sm);
     background-color: var(--border-primary);
-    // @media (max-width: 750px) {
-    //   bottom: calc(0px + var(--spacing-4xl) * -1);
-    // }
+
+    @media (max-width: 750px) {
+      margin-top: var(--spacing-3xl);
+    }
   }
 }

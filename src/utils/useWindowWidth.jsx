@@ -27,7 +27,9 @@ export default function useWindowWidth() {
 
     // Clean up the event listener when the component unmounts
     return () => {
-      window.removeEventListener("resize", handleResize);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
     };
   }, []); // Empty dependency array to run once on mount
 

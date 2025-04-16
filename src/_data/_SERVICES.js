@@ -5,13 +5,13 @@ export const _SERVICES = {
   },
   subtitle: {
     tag: "[EXPERTISE]",
-    body: "As a passionate creative digital product & web designer, I love helping business grow through user centric, design and digital solutions.",
+    body: "We’ve had enough of boring websites that don’t convert. That’s why I craft standout digital experiences that captivate, engage with your brand audience, and drive real business growth.",
   },
   cards: [
     {
       id: "01",
       title: "Web Design",
-      body: "As a passionate creative digital product designer, I love helping business grow through user centric, design and digital solutions.",
+      body: "With a focus on clarity and brand storytelling, I transform your business visions into visually striking websites that leaves a lasting impression. Every element is designed with purpose, guided by UX heuristics and thoughtful creative direction.",
       tag: "[DESIGN]",
       pills: [
         "Creative Direction",
@@ -24,7 +24,7 @@ export const _SERVICES = {
     {
       id: "02",
       title: "Web Development",
-      body: "As a passionate creative digital product designer, I love helping business grow through user centric, design and digital solutions.",
+      body: "Whether it’s custom code or no-code solutions, I build seamless, modern websites that perform well and keep your users coming back. I also love adding a human touch through thoughtful motion and subtle animations without overwhelming the user.",
       tag: "[DEVELOPMENT]",
       pills: [
         "Motion & Animations",
@@ -37,7 +37,7 @@ export const _SERVICES = {
     {
       id: "03",
       title: "Design Systems",
-      body: "As a passionate creative digital product designer, I love helping business grow through user centric, design and digital solutions.",
+      body: " Design systems are more than style guides. They’re the backbone of a unified brand experience. I love helping teams maintain visual harmony across platforms with scalable systems that bring structure, consistency, and efficiency in budilding digital products. ",
       tag: "[SYSTEM]",
       pills: [
         "Design Systems",
@@ -45,6 +45,7 @@ export const _SERVICES = {
         "Scalable",
         "Multi Theming",
         "Maintainable",
+        "Inter Brands",
       ],
     },
   ],

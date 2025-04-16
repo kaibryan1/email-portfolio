@@ -9,7 +9,6 @@ export default function Curve({ isActive }) {
 
   useEffect(() => {
     const h = window.innerHeight;
-    console.log(h);
     const initialPath = `M100 0 L100 ${h} Q-100 ${h / 2} 100 0`;
     const targetPath = `M100 0 L100 ${h} Q100 ${h / 2} 100 0`;
     setPaths({ initial: initialPath, target: targetPath });

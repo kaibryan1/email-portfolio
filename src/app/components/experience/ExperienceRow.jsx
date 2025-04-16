@@ -45,7 +45,7 @@ export default function ExperienceRow({ data, isActive, onEnter, onLeave }) {
   }, []);
 
   //Data
-  const { id, title, year, type, hashTags } = data;
+  const { id, title, body, year, type, hashTags } = data;
   return (
     <li
       ref={itemRef}
@@ -57,10 +57,7 @@ export default function ExperienceRow({ data, isActive, onEnter, onLeave }) {
         <div className={styles.row_first}>
           <div>
             <h4 className={isActive ? styles.hovered : ""}>{title}</h4>
-            <p className={`body-sm ${styles.body}`}>
-              Some of my freelance projects that has made positive impact on
-              people’s lives and solved business problems.
-            </p>
+            <p className={`body-sm ${styles.body}`}>{body}</p>
           </div>
           <span className={styles.row_first_year}>
             <Tag label={year} type="filled" state={isActive ? "hovered" : ""} />

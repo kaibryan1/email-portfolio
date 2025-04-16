@@ -1,0 +1,17 @@
+@keyframes sprite-animation {
+  0% {
+    background-position: 0px 0;
+  }
+  100% {
+    background-position: -1024px 0;
+  } // Move left to last frame
+}
+
+.sprite {
+  background-repeat: no-repeat;
+  animation-name: sprite-animation;
+  animation-timing-function: steps(4);
+  animation-iteration-count: infinite;
+  transition: none !important;
+  image-rendering: pixelated;
+}

@@ -14,7 +14,7 @@ const projects = _PROJECTS.projects;
 
 export default function Projects() {
   return (
-    <section className={`section section-padding-lg`}>
+    <section id="section_work" className={`section section-padding-lg`}>
       <div className="container grid-desktop">
         <Title firstLine={firstLine} secondLine={secondLine} />
       </div>

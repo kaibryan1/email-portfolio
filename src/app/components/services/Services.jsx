@@ -14,7 +14,10 @@ const cards = _SERVICES.cards;
 
 export default function Services() {
   return (
-    <section className={`section section-padding-lg  ${styles.serviceWrapper}`}>
+    <section
+      id="section_services"
+      className={`section section-padding-lg  ${styles.serviceWrapper}`}
+    >
       <div className={`container grid-desktop`}>
         <Title firstLine={firstTitle} secondLine={secondTitle} />
       </div>

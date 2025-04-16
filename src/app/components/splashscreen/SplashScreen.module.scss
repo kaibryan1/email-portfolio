@@ -1,0 +1,50 @@
+/* components/SplashScreen.module.css */
+.splashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-background, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.1s ease-out;
+}
+
+.splashScreen.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content {
+  text-align: center;
+
+  & .text {
+    font-family: var(--reddit-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 20px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--color-primary, #333);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

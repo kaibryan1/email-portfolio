@@ -1,20 +1,20 @@
 .gallery {
-  min-height: 30vh;
+  width: 240px;
+  height: 240px;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
   position: relative;
 
   & .vignette {
-    width: 17vw;
-    height: 30vh;
+    width: 240px;
     position: fixed;
-    // transform: translate(50% 50%);
     overflow: hidden;
+    border-radius: var(--border-radius-md);
 
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      scale: 1.4;
+      scale: 1;
     }
   }
 }

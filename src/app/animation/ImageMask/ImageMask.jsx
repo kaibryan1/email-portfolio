@@ -4,7 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ImageMask({ children, start, className }) {
+export default function ImageMask({ children, delay, start, className }) {
+  const containerRef = useRef(null);
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -20,6 +21,7 @@ export default function ImageMask({ children, start, className }) {
         clipPath: "inset(0% 0% 0% 0%)",
         duration: 0.8,
         ease: "cubic-bezier(0.76, 0, 0.24, 1)",
+        delay: delay || 0,
         scrollTrigger: {
           trigger: containerRef.current,
           start: start || "top 80%",
@@ -29,7 +31,6 @@ export default function ImageMask({ children, start, className }) {
     });
   }, []);
 
-  const containerRef = useRef(null);
   return (
     <div ref={containerRef} className={`${className} ${styles.imageMask}`}>
       {children}

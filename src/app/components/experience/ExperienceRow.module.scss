@@ -3,11 +3,18 @@
   overflow: hidden;
   grid-column: 1/13;
   padding: var(--spacing-xl) 0px;
-  min-height: 30vh;
-  background-color: var(--surface-page);
+  // min-height: 30vh;
+  min-height: 240px;
   transition: background-color 0.3s ease-out;
+  & > * {
+    opacity: 0.6;
+    transition: all 0.2s ease-out;
+  }
 
   &.hovered {
+    & > * {
+      opacity: 1;
+    }
     & h4 {
       color: var(--text-heading);
     }
@@ -76,13 +83,15 @@
   }
 
   &_first {
+    align-items: flex-start;
+
     & h4 {
       margin-bottom: var(--spacing-md);
     }
 
     & p {
       color: var(--text-disabled);
-      max-width: 30vw;
+      max-width: 33vw;
 
       @media (max-width: 750px) {
         max-width: 100%;

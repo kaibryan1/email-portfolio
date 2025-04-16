@@ -1,6 +1,7 @@
 .wrapper {
   height: 100%;
-  width: 17vw;
+  // width: 17vw;
+  width: 240px;
   will-change: clip-path !important;
 
   @media (max-width: 750px) {
@@ -9,6 +10,5 @@
 
   &:global(.inView) {
     opacity: 1;
-    // clip-path: inset(0 0 0 0);
   }
 }

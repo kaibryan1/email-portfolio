@@ -1,11 +1,11 @@
 :root {
   /* Brand -> Primary */
-  --neue-color-brand-50: #f7fafc;
-  --neue-color-brand-100: #e5ebec;
-  --neue-color-brand-300: #c9d6d5;
-  --neue-color-brand-500: #adbfc0;
-  --neue-color-brand-700: #6a7b7d;
-  --neue-color-brand-800: #292e30;
+  --neue-color-brand-50: #f7f3f0;
+  --neue-color-brand-100: #fbf6f1;
+  --neue-color-brand-300: #f0e5dd;
+  --neue-color-brand-500: #787069;
+  --neue-color-brand-700: #332f2d;
+  --neue-color-brand-800: #21201e;
 
   /* Grey -> Neutrals*/
   --neue-color-grey-50: #f9fafaff;

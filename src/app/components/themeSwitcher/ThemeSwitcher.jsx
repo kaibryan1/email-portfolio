@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./ThemeSwitcher.module.scss";
 import ThemeSwitch from "./ThemeSwitch";
 import SwitchIcon from "./SwitchIcon";
-import useWindowWidth from "@/utils/useWindowWidth"; //Get window width
 import { useTheme } from "@/app/store/ThemeProvider";
 
 // Data
@@ -15,19 +14,28 @@ const { themes } = _THEMES;
 export default function ThemeSwitcher() {
   const [isActive, setIsActive] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
-  const { width } = useWindowWidth();
-  const isMobile = width <= 750; //Overlay is hown only on mobile
 
   const { themeName, mode, updateTheme } = useTheme(); //Get theme name and mode from context
 
   const handleSwitch = (newTheme) => {
-    const newMode = mode === "light" ? "light" : "dark"; //Add Mode Later
+    const newMode = mode === "light" ? "light" : "dark"; // Ignore this we will add switch Mode Later
     updateTheme(newTheme, newMode);
 
     // Store inside Local Storage and Reload the browser
     localStorage.setItem("theme", newTheme);
+    localStorage.setItem("skipThemeApply", "true");
+    setIsActive(false);
+    // Add a delay here
     window.location.reload();
   };
+
+  useEffect(() => {
+    // Remove the skipTheme flag after the first render
+    const skipTheme = localStorage.getItem("skipThemeApply") === "true";
+    if (skipTheme) {
+      localStorage.removeItem("skipThemeApply");
+    }
+  }, []);
 
   return (
     <div className={styles.themeSwitcher}>
@@ -54,7 +62,7 @@ export default function ThemeSwitcher() {
         isActive={isActive}
       ></SwitchIcon>
       <AnimatePresence>
-        {isActive && isMobile && (
+        {isActive && (
           <motion.div
             className={`overlay ${styles.overlay}`}
             onClick={() => setIsActive(!isActive)}

@@ -33,7 +33,6 @@ export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
 
     const handleScroll = () => {
       setIsActive(false);
-      console.log("Scrolled event triggered");
     };
 
     window.addEventListener("scroll", handleScroll);

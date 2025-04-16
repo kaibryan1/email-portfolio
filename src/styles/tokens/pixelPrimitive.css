@@ -1,11 +1,11 @@
 :root {
   /* Brand -> Primary */
-  --pixel-color-brand-50: #f7fafc;
-  --pixel-color-brand-100: #e5ebec;
-  --pixel-color-brand-300: #c9d6d5;
-  --pixel-color-brand-500: #adbfc0;
-  --pixel-color-brand-700: #6a7b7d;
-  --pixel-color-brand-800: #292e30;
+  --pixel-color-brand-50: #edf6fe;
+  --pixel-color-brand-100: #d2e6fd;
+  --pixel-color-brand-300: #94c4fa;
+  --pixel-color-brand-500: #4d9df7;
+  --pixel-color-brand-700: #2a5388;
+  --pixel-color-brand-800: #0c1425;
 
   /* Grey -> Neutrals*/
   --pixel-color-grey-50: #f9fafaff;
@@ -49,7 +49,7 @@
   --pixel-line-height-h1: 40px;
   --pixel-line-height-h1-desktop: 68px;
   --pixel-line-height-h2: 44px;
-  --pixel-line-height-h2-desktop: 68px;
+  --pixel-line-height-h2-desktop: 56px;
   --pixel-line-height-h3: 32px;
   --pixel-line-height-h3-desktop: 40px;
   --pixel-line-height-h4: 28px;

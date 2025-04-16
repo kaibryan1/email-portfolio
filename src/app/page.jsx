@@ -1,31 +1,37 @@
 "use client";
-import { useEffect } from "react";
+import styles from "./page.module.scss";
+
+import { useEffect, useState } from "react";
 
 import { SmoothScrollProvider } from "@/utils/SmoothScroll";
-import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
-import Services from "./components/services/Services";
-import Projects from "./components/projects/Projects";
-import Experience from "./components/experience/Experience";
-import About from "./components/about/About";
-import Footer from "./components/footer/Footer";
+import { ToastProvider } from "./store/ToastProvider";
+import Loader from "./components/loader/Loader";
+import Cursor from "./animation/Cursor/Cursor";
+import Page from "./components/pages/home/page";
 
 export default function Home() {
+  const [isPageLoaded, setIsPageLoaded] = useState(null);
   useEffect(() => {
+    // Hide Styles **
     document.body.style.opacity = "1";
+    // Page loaded?
+    const timer = setTimeout(() => {
+      setIsPageLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
   return (
     <SmoothScrollProvider>
-      <section>
-        <Navbar />
-        {/* <Menu /> */}
-        <Hero />
-        <Services />
-        <Projects />
-        <Experience />
-        <About />
-        <Footer />
-      </section>
+      <ToastProvider>
+        <section>
+          <div className={styles.texture}></div>
+          <Loader />
+          <Page />
+          {/* <Cursor /> */}
+        </section>
+      </ToastProvider>
     </SmoothScrollProvider>
   );
 }

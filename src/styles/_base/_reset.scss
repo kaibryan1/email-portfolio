@@ -13,6 +13,10 @@ html p {
   font-weight: var(--font-weight-medium);
 }
 
+html body {
+  user-select: auto;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

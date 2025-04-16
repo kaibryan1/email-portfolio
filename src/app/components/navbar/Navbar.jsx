@@ -5,7 +5,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, easeOut } from "framer-motion";
 import NavListItems from "../navListItems/NavListItems"; //Nav List
+import NavListPixel from "../navListItems/NavListPixel"; //Nav List Pixel
 import TimeCode from "../timecode/TimeCode"; //Time Code
+import { useTheme } from "@/app/store/ThemeProvider";
+import useWindowWidth from "@/utils/useWindowWidth";
 
 // Data
 import { _NAVBAR } from "@/_data/_NAVBAR";
@@ -15,6 +18,9 @@ const logo_neue = _NAVBAR.logo.neue.handle;
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
+  const { themeName } = useTheme();
+  const { width } = useWindowWidth();
+  const desktop = width >= 750;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,19 +46,21 @@ export default function Navbar() {
         }}
         exit={{ opacity: 1 }}
       >
-        <div className={styles.logo}>
-          <Image
-            src={`/images/logo/${logo_pixel}.png`}
-            width={500}
-            height={500}
-            alt="Logo Profile Picture"
-          ></Image>
+        <div className={styles.logo_wrapper}>
+          <div className={styles.typemark}>
+            <p>KAI BRYANT© CREATIVE</p>
+            <p>⸺ WEB & UX DESIGNER</p>
+          </div>
         </div>
         <div className={styles.timeWrapper}>
           <TimeCode />
         </div>
         <div className={styles.navListWrapper}>
-          <NavListItems navList={navList} />
+          {themeName === "neue" ? (
+            desktop && <NavListItems navList={navList} />
+          ) : (
+            <NavListPixel navList={navList} />
+          )}
         </div>
       </motion.div>
     </nav>

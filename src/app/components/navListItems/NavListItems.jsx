@@ -9,6 +9,7 @@ export default function NavListItems({ navList }) {
   const handleMouseMove = (event) => {
     setMouseY(event.clientY);
   };
+
   return (
     <ul className={`navList ${styles.navListItems}`}>
       {navList.map((item) => {
@@ -16,8 +17,7 @@ export default function NavListItems({ navList }) {
           <NavItem
             setIsActive={setIsActive}
             isActive={isActive === item.id}
-            id={item.id}
-            label={item.label}
+            data={item}
             key={item.label}
           />
         );

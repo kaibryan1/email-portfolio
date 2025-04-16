@@ -3,7 +3,7 @@ import styles from "./Description.module.scss";
 import Tag from "../tag/Tag"; //Tag Compo
 import SplitPara from "@/app/animation/split/SplitPara";
 
-export default function Description({ tag, body }) {
+export default function Description({ tag, body, delay }) {
   return (
     <>
       <div className={`tag ${styles.description_tag}`}>
@@ -12,6 +12,7 @@ export default function Description({ tag, body }) {
       {Array.isArray(body) ? (
         <SplitPara
           className={`description ${styles.description_body} ${styles.description_array}`}
+          delay={delay}
         >
           {body.map((para, i) => {
             return (
@@ -23,7 +24,10 @@ export default function Description({ tag, body }) {
           <br />
         </SplitPara>
       ) : (
-        <SplitPara className={`description ${styles.description_body}`}>
+        <SplitPara
+          className={`description ${styles.description_body}`}
+          delay={delay}
+        >
           <p>{body}</p>
         </SplitPara>
       )}

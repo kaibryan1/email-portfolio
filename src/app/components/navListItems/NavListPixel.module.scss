@@ -1,0 +1,21 @@
+.nav_menu {
+  width: max-content;
+  margin-left: auto;
+}
+
+.navListItems {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  display: none;
+
+  &:global(.visible) {
+    display: flex;
+  }
+
+  @media (max-width: 750px) {
+    margin-top: var(--spacing-xs);
+    width: max-content;
+    margin-left: auto;
+  }
+}

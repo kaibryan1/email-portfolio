@@ -1,23 +1,39 @@
+"use client";
+
 import styles from "./Gallery.module.scss";
-import React from "react";
 import { useRef, useEffect } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 import { _EXPERIENCE } from "@/_data/_EXPERIENCE";
 import Vignette from "../vignette/Vignette";
+const gallery = _EXPERIENCE.experiences;
 
 export default function Gallery() {
   const vignetteRef = useRef(null);
-  const isInView = useInView(vignetteRef);
+  // const isInView = useInView(vignetteRef);
 
   useEffect(() => {
-    if (isInView && vignetteRef.current) {
-      vignetteRef.current.classList.add("inView");
-    } else if (!isInView && vignetteRef.current) {
-      vignetteRef.current.classList.remove("inView");
-    }
-  }, [isInView]);
+    if (!vignetteRef.current) return;
 
-  const gallery = _EXPERIENCE.gallery;
+    gsap.fromTo(
+      vignetteRef.current,
+      {
+        clipPath: "inset(0% 50% 0% 50%)", // FROM
+      },
+      {
+        clipPath: "inset(0% 0% 0% 0%)", // TO
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: vignetteRef.current,
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []); //Add is in view if framer motion
 
   const spring = {
     stiffness: 150,
@@ -26,22 +42,10 @@ export default function Gallery() {
   };
 
   return (
-    <motion.div
-      ref={vignetteRef}
-      className={styles.wrapper}
-      initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
-      animate={{
-        clipPath: isInView ? "inset(0% 0% 0% 0%)" : "inset(0% 50% 0% 50%)",
-        transition: { duration: 0.6, delay: 0.2, ...spring },
-      }}
-      exit={{
-        clipPath: "inset(0% 50% 0% 50%)",
-        transition: { duration: 0.1 },
-      }}
-    >
+    <div ref={vignetteRef} className={styles.wrapper}>
       {gallery.map((image, i) => (
-        <Vignette key={i} handle={image.handle} />
+        <Vignette key={i} handle={image.image} />
       ))}
-    </motion.div>
+    </div>
   );
 }

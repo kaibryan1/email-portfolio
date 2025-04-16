@@ -1,7 +1,7 @@
 "use client";
+import styles from "./HeroNeue.module.scss";
 
-import React from "react";
-import styles from "./Hero.module.scss";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Title from "../title/Title"; //Title Component
 import Description from "../description/Description"; //Description
@@ -15,17 +15,34 @@ const tag = _HERO.subtitle.tag;
 const body = _HERO.subtitle.body;
 const heroImage = _HERO.images.hero.handle;
 
-export default function Hero() {
+export default function HeroNeue() {
+  const [isActive, setIsActive] = useState(null);
+  const heroDelay = 0.8;
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setIsActive(true);
+    }, 1500);
+
+    return () => clearTimeout(timeOut);
+  }, []);
   return (
-    <section className={`section ${styles.hero_section}`}>
+    <section
+      id="section_hero"
+      className={`section ${styles.hero_section} ${isActive && styles.active}`}
+    >
       <div className={`container ${styles.hero_container}`}>
         <div className={styles.hero_wrapper}>
           <div className="grid-desktop">
-            <Title firstLine={firstTitle} secondLine={secondTitle} />
+            <Title
+              firstLine={firstTitle}
+              secondLine={secondTitle}
+              delay={heroDelay}
+            />
           </div>
           <div className={`${styles.grid_row} grid-desktop`}>
-            <Description tag={tag} body={body} />
-            <ImageMask className={styles.heroImage}>
+            <Description tag={tag} body={body} delay={heroDelay} />
+            <ImageMask delay={heroDelay} className={styles.heroImage}>
               <Image
                 src={`/images/about/${heroImage}`}
                 alt="Hero Image"
@@ -33,6 +50,7 @@ export default function Hero() {
                 height={1000}
                 className={styles.image}
               ></Image>
+              <div className={styles.blur}></div>
             </ImageMask>
           </div>
         </div>

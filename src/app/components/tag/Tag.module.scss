@@ -4,13 +4,10 @@
   text-transform: uppercase;
   width: max-content !important;
   display: inline-block;
-  margin-top: 8px;
   border: "none";
   border-radius: "none";
   padding: "none";
   color: var(--text-body);
-  transition: all 0.4s ease-out;
-  font-size: 12px;
   @include mix.label-sm;
 
   &.hovered {
@@ -20,8 +17,6 @@
   & {
     @include mix.below(450px) {
       display: block;
-      margin-top: var(--spacing-lg);
-      margin-bottom: var(--spacing-sm);
     }
   }
 }
@@ -30,6 +25,8 @@
   border: var(--border-width-sm) solid var(--border-primary);
   border-radius: var(--border-radius-rounded);
   padding: var(--spacing-sm) var(--spacing-md);
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   &.hovered {
     color: var(--text-on-action) !important; // Now .outline.hovered works!

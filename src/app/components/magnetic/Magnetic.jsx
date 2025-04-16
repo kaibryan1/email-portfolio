@@ -29,7 +29,7 @@ export default function Magnetic({ children }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={reset}
       animate={{ x, y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+      transition={{ type: "spring", stiffness: 150, damping: 20, mass: 0.1 }}
     >
       {children}
     </motion.div>

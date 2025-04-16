@@ -1,3 +1,5 @@
+@use "../../../styles/_abstracts/" as mix;
+
 @keyframes flickerMove {
   0% {
     transform: translateX(-120%);
@@ -9,15 +11,22 @@
   }
 }
 
+.container {
+  overflow: visible;
+  position: relative;
+}
+
 .mail {
   position: relative;
   padding-bottom: var(--spacing-md);
   transition: all 0.3s ease-out;
-  overflow: hidden;
   z-index: 1;
   cursor: pointer;
   color: var(--text-heading);
   padding-left: var(--spacing-sm);
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
 
   &::after {
     content: "";
@@ -38,4 +47,40 @@
   width: 20%;
   height: 2px;
   background-color: var(--surface-page);
+}
+
+.action {
+  position: absolute;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: var(--border-width-sm) solid var(--border-primary);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: max-content;
+  border-radius: var(--border-radius-md);
+  color: var(--text-body);
+  background-color: var(--primary-100);
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+
+  & p {
+    @include mix.label-sm;
+  }
+
+  & svg {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--surface-action);
+
+    & path {
+      stroke: var(--text-on-action) !important;
+    }
+  }
 }

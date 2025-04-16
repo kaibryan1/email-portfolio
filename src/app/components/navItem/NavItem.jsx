@@ -5,10 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 import { useTheme } from "@/app/store/ThemeProvider";
 
-export default function NavItem({ label, id, isActive, setIsActive, mouseY }) {
+export default function NavItem({ data, isActive, setIsActive, mouseY }) {
+  const { id, label, sectionId } = data;
   const itemRef = useRef(null);
   const labelRef = useRef(null);
   const isInView = useInView(itemRef);
@@ -54,6 +58,21 @@ export default function NavItem({ label, id, isActive, setIsActive, mouseY }) {
     });
   }, []);
 
+  const handleClick = () => {
+    const section = document.getElementById(sectionId);
+    console.log(section);
+    if (!section) return;
+
+    gsap.to(window, {
+      scrollTo: {
+        y: section,
+        offsetY: 0, // Optional: offset from the top
+      },
+      duration: 1.7,
+      ease: "power2.inOut",
+    });
+  };
+
   return (
     <li
       ref={itemRef}
@@ -62,6 +81,7 @@ export default function NavItem({ label, id, isActive, setIsActive, mouseY }) {
       } ${styles[themeName]}`}
       onMouseEnter={(event) => handleMouseEnter(event)}
       onMouseLeave={(event) => handleMouseLeave(event)}
+      onClick={handleClick}
     >
       <div className="wrap_line">
         <p

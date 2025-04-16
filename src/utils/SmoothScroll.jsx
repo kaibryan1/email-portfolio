@@ -11,11 +11,11 @@ export function SmoothScrollProvider({ children }) {
 
   useEffect(() => {
     const lenisInstance = new Lenis({
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -7 * t)),
       smooth: true,
       smoothTouch: true,
-      duration: 0.6,
-      lerp: 0.7,
+      duration: 0.8,
+      lerp: 0.9,
     });
 
     setLenis(lenisInstance);
