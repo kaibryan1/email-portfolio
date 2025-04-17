@@ -26,7 +26,7 @@
 
 .section {
   width: 100%;
-  padding: 0 48px;
+  padding-inline: 48px;
 
   @include mix.below(750px) {
     padding: 0 16px;
