@@ -46,9 +46,8 @@
   &_label {
     position: relative;
     z-index: 2;
-    font-family: var(--font-body);
-    font-size: var(--font-size-body-sm);
     font-weight: 600;
+    @include mix.body-sm;
 
     &.pixel {
       text-transform: uppercase;

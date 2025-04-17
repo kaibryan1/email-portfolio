@@ -4,15 +4,26 @@
   --text-heading-secondary: var(--primary-500);
   --text-body: var(--primary-700);
   --text-on-action: var(--primary-50);
-  --text-action-hover: var(--primary-50);
+  --text-action: var(--primary-700);
+  --text-action-hover: var(--primary-800);
   --text-disabled: var(--neutral-300);
   --text-on-disabled: var(--neutral-700);
 
+  /* Icon color */
+  --icon-primary: var(--primary-700);
+  --icon-on-action: var(--primary-50);
+  --icon-action: var(--primary-700);
+  --icon-action-hover: var(--primary-800);
+  --icon-disabled: var(--neutral-300);
+  --icon-on-disabled: var(--neutral-700);
+
   /* Surface Color */
-  --surface-primary: var(--primary-500);
+  --surface-primary: var(--primary-100);
   --surface-primary-2: var(--neutral-100);
   --surface-action: var(--primary-700);
   --surface-action-hover: var(--primary-800);
+  --surface-focus: var(--primary-700);
+  --surface-disabled: var(--neutral-300);
 
   /* Page Color*/
   --surface-page: var(--primary-50);

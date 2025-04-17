@@ -2,11 +2,16 @@
   position: fixed;
   z-index: 0;
   bottom: 0;
-  padding-top: var(--spacing-5xl);
-  padding-bottom: var(--spacing-5xl);
+  padding-top: var(--spacing-5xl) !important;
+  padding-bottom: var(--spacing-5xl) !important;
   background-color: var(--primary-800);
   height: var(--footer-spacer-height);
   width: 100%;
+
+  @media (max-width: 750px) {
+    padding-top: var(--spacing-3xl) !important;
+    padding-bottom: var(--spacing-3xl) !important;
+  }
 
   & .typemarkWrapper {
     grid-column: 1/7;
@@ -22,7 +27,7 @@
         height: 100%;
 
         & path {
-          fill: var(--text-action-hover);
+          fill: var(--text-on-action);
         }
       }
     }
@@ -44,7 +49,7 @@
 
       & p {
         font-weight: var(--font-weight-medium);
-        color: var(--text-action-hover);
+        color: var(--text-on-action);
         text-transform: uppercase;
       }
     }
@@ -54,7 +59,7 @@
       height: 40px !important;
 
       svg path {
-        fill: var(--text-action-hover);
+        fill: var(--text-on-action);
       }
     }
   }
@@ -90,7 +95,7 @@
 
       & p {
         font-weight: var(--font-weight-medium);
-        color: var(--text-action-hover);
+        color: var(--text-on-action);
         text-transform: uppercase;
       }
     }
@@ -131,7 +136,7 @@
     }
 
     & p {
-      color: var(--text-action-hover) !important;
+      color: var(--text-on-action) !important;
       margin: 0px;
       display: inline-block;
     }
@@ -178,7 +183,7 @@
 
   &:hover {
     & svg path {
-      stroke: var(--text-action-hover);
+      stroke: var(--text-on-action);
     }
     & .shader {
       clip-path: inset(0% 0% 0% 0%);

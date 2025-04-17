@@ -9,7 +9,7 @@ export const _HERO = {
   },
   images: {
     hero: {
-      handle: "kai.png",
+      handle: "kai_neue.png",
       alt: "Portrait image of Kai",
     },
   },

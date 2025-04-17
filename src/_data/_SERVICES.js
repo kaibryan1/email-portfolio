@@ -29,7 +29,7 @@ export const _SERVICES = {
       pills: [
         "Motion & Animations",
         "JS Framworks",
-        "Webflow",
+        "Responsive Web",
         "Seamless Interaction",
         "Web Animations",
       ],
@@ -37,7 +37,7 @@ export const _SERVICES = {
     {
       id: "03",
       title: "Design Systems",
-      body: " Design systems are more than style guides. They’re the backbone of a unified brand experience. I love helping teams maintain visual harmony across platforms with scalable systems that bring structure, consistency, and efficiency in budilding digital products. ",
+      body: "I love helping brands maintain visual harmony across platforms with scalable design systems that bring structure, consistency, and efficiency in budilding digital products.",
       tag: "[SYSTEM]",
       pills: [
         "Design Systems",

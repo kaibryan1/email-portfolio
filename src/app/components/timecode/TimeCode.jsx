@@ -18,15 +18,13 @@ export default function TimeCode() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <span>
+    <span className={styles.timecode}>
       <Tag
         className={styles.timeTag}
         type="normal"
         label="[local time: GMT+7]"
       />
-      <p style={{ fontSize: "var(--font-size-body-sm)" }}>
-        {time && time.toLocaleTimeString()}
-      </p>
+      <p className={styles.timer}>{time && time.toLocaleTimeString()}</p>
     </span>
   );
 }

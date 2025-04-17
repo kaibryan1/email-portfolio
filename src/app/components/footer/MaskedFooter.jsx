@@ -23,7 +23,7 @@ export default function MaskedFooter() {
   }, []);
 
   return (
-    <div ref={maskedFooterRef} className={`${styles.maskedFooter} section`}>
+    <div ref={maskedFooterRef} className={` section ${styles.maskedFooter}`}>
       <div className="container grid-desktop">
         {/* Typemark */}
         <div className={styles.typemarkWrapper}>

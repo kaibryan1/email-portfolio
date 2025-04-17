@@ -1,5 +1,17 @@
+@use "../../../styles/_abstracts/" as mix;
+
+.timecode {
+  & p {
+    color: var(--text-body);
+  }
+}
+
 .timeTag {
   & p {
     margin-bottom: 0 !important;
   }
+}
+
+.timer {
+  @include mix.body-sm;
 }

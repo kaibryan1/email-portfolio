@@ -40,7 +40,6 @@
 
 .about_image {
   & .detailsWrapper {
-    // margin-top: auto;
     grid-column: 6/-1;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -90,7 +89,8 @@
 
       & path {
         stroke-width: 1.5px;
-        // stroke: var(--text-body);
+        stroke: var(--icon-primary);
+        fill: var(--icon-primary);
       }
     }
   }
@@ -101,12 +101,12 @@
   max-height: 70vh;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  // margin-top: var(--spacing-6xl);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
   z-index: 1;
+  background-color: var(--primary-300);
 
   @media (max-width: 750px) {
     max-height: 45vh;
@@ -120,7 +120,7 @@
     position: absolute;
     top: 0;
     z-index: -1;
-    background-color: hsla(0, 0%, 50%, 0.3);
+    background-color: hsla(0, 0%, 50%, 0.2);
     filter: blur(40px);
   }
 
@@ -128,7 +128,6 @@
     width: auto;
     height: 90%;
     object-fit: cover;
-    filter: drop-shadow(16px 160px 100px #fff4eb);
 
     @media (max-width: 750px) {
       width: 90%;

@@ -27,10 +27,14 @@
   text-align: center;
   align-content: center;
   background-color: var(--surface-action);
-  border-radius: 1000px;
+  border-radius: var(--border-radius-rounded);
+
+  &:hover {
+    background-color: var(--surface-action-hover);
+  }
 
   &.active {
-    background-color: var(--surface-primary-2);
+    background-color: var(--surface-focus);
   }
 }
 
@@ -45,9 +49,10 @@
     height: 1.5px;
     width: 30%;
     margin: auto;
-    background-color: var(--surface-page);
+    background-color: var(--icon-on-action);
     position: relative;
     transition: transform 0.4s ease-out;
+    border-radius: 10px;
   }
 
   &::before {
@@ -63,12 +68,10 @@
   &::before {
     transform: rotate(-45deg);
     top: 0px;
-    background-color: var(--text-heading);
   }
 
   &::after {
     transform: rotate(45deg);
     top: -1px;
-    background-color: var(--text-heading);
   }
 }

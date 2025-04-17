@@ -24,10 +24,7 @@ export default function page() {
       <main className={styles.page}>
         <Header />
         {!isChangingTheme && (
-          <>
-            {themeName === "neue" ? <HeroNeue /> : <HeroPixel />}
-            {/* rest of your page content */}
-          </>
+          <>{themeName === "neue" ? <HeroNeue /> : <HeroPixel />}</>
         )}
         <Services />
         <Projects />
