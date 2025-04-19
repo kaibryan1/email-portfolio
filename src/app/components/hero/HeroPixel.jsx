@@ -33,6 +33,9 @@ export default function HeroPixel() {
       id="section_hero"
       className={`section section-padding-lg ${styles.section_hero}`}
     >
+      <div className={styles.announcement}>
+        <p>This theme is still WIP and you may find broken assets.</p>
+      </div>
       <div className={`container ${styles.hero_container}`}>
         <div className={styles.hero_wrapper}>
           <div className="grid-desktop">

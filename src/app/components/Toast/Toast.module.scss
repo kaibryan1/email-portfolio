@@ -1,7 +1,7 @@
 @use "../../../styles/_abstracts/" as mix;
 
 .toast {
-  max-width: 400px;
+  max-width: 80vw;
   min-width: 240px;
   min-height: 40px;
   display: flex;
@@ -12,12 +12,13 @@
   top: 24px;
   left: 50%;
   transform-origin: center;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
-  background-color: var(--primary-50);
+  box-shadow: 0 2px 16px rgba(120, 112, 105, 0.1);
+  background-color: var(--surface-primary);
   padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   border: 1px solid var(--border-primary);
   overflow: hidden;
+  width: max-content;
 
   & .icon {
     width: 24px;
@@ -39,10 +40,13 @@
     }
   }
 
-  & p {
-    margin: 0px !important;
-    padding: 0px !important;
-    color: var(--text-body);
-    @include mix.label-sm;
+  & .text {
+    width: 100%;
+    & p {
+      margin: 0px !important;
+      padding: 0px !important;
+      color: var(--text-body);
+      @include mix.label-sm;
+    }
   }
 }

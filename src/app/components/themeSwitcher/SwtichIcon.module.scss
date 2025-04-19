@@ -1,11 +1,31 @@
 @use "../../../styles/_abstracts/" as mix;
 
+.wrapper {
+  position: relative;
+  z-index: 12 !important;
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.modeIcon {
+  height: 100%;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--surface-action);
+  cursor: pointer;
+
+  & svg {
+    margin-top: 2px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
 .switchIcon {
   background-color: var(--surface-action);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius-sm);
   margin-left: auto;
-  margin-top: var(--spacing-sm);
   overflow: hidden;
   cursor: pointer;
   position: relative;

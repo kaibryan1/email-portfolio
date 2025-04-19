@@ -39,13 +39,26 @@
     transform-origin: left;
   }
 
-  :global(.wrap_line) {
+  .textWrapper {
     overflow: hidden;
+    display: flex;
+    gap: 0px;
+    position: relative;
+    z-index: 2;
+
+    & svg path {
+      margin-top: 2px;
+      stroke: var(--text-heading);
+      transition: transform 0.2s ease-out;
+    }
+
+    &.hovered svg path {
+      stroke: var(--text-on-action);
+      transform: translateY(-4px) translateX(4px);
+    }
   }
 
   &_label {
-    position: relative;
-    z-index: 2;
     font-weight: 600;
     @include mix.body-sm;
 

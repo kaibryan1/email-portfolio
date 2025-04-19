@@ -66,12 +66,10 @@ export default function ThemeSwitch({
       >
         {/* Image */}
         <div className={styles.imageWrapper}>
-          <Image
+          <img
             src={`/images/themes/${handle}`}
-            width={400}
-            height={400}
             alt="Theme Preview Website Cover Image"
-          ></Image>
+          />
         </div>
         {/* Details */}
         <div ref={detailsRef} className={styles.details}>

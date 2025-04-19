@@ -8,7 +8,7 @@ export const _THEMES = {
     },
     {
       theme: "pixel",
-      title: "[PIXEL MINIMAL]",
+      title: "[PIXEL WORLD]",
       body: "Ditch The Aesthetic!",
       handle: "theme_pixel.jpg",
     },

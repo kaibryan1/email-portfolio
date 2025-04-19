@@ -3,14 +3,16 @@ import styles from "./About.module.scss";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-import SplitType from "split-type";
 
 import Image from "next/image";
 import Title from "../title/Title";
 import Description from "../description/Description";
 import ImageMask from "@/app/animation/ImageMask/ImageMask";
 import { useTheme } from "@/app/store/ThemeProvider";
+
+// Plugins
+gsap.registerPlugin(ScrollTrigger);
+import SplitType from "split-type";
 
 // Data
 import { _ABOUT } from "@/_data/_ABOUT";
@@ -55,6 +57,7 @@ export default function About() {
 
     return () => split.revert();
   }, []);
+
   return (
     <section id="section_about" className={`section ${styles.section_about}`}>
       <div className="container grid-desktop">

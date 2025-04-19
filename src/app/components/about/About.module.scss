@@ -10,13 +10,14 @@
 }
 
 .title {
-  grid-column: 1/-2;
+  grid-column: 1/10;
   margin-bottom: var(--spacing-3xl);
   color: var(--text-body) !important;
   // text-transform: uppercase;
   line-height: var(--line-height-h1-desktop);
   vertical-align: middle;
   letter-spacing: -1.5px;
+  letter-spacing: var(--letter-spacing-h2-desktop);
 
   @media (max-width: 750px) {
     line-height: var(--line-height-h1);
@@ -70,16 +71,24 @@
 
   & .arrow {
     grid-row: 1;
-    grid-column: 1/-1 !important;
+    grid-column: 1/-2 !important;
     margin-bottom: var(--spacing-6xl);
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 750px) {
+      justify-content: flex-start;
+    }
 
     & .iconWrapper {
       width: 100px;
       height: 100px;
+      transform: rotate(90deg);
 
       @media (max-width: 750px) {
         width: 56px;
         height: 56px;
+        transform: rotate(0deg);
       }
 
       & svg {

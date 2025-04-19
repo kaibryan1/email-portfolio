@@ -4,7 +4,7 @@ export const _EXPERIENCE = {
     secondLine: "EXPERIENCE",
   },
   subtitle: {
-    tag: "[EXPERTISE]",
+    tag: "[EXPERIENCE]",
     body: "I’ve had the privilege of working with a variety of startups and premium brands to create websites that combine artistry with function. Below is a snapshot of my work and journey.",
   },
   gallery: [

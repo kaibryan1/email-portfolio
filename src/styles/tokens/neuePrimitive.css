@@ -4,8 +4,10 @@
   --neue-color-brand-100: #fbf6f1;
   --neue-color-brand-300: #f0e5dd;
   --neue-color-brand-500: #787069;
-  --neue-color-brand-700: #332f2d;
-  --neue-color-brand-800: #21201e;
+  /* --neue-color-brand-700: #332f2d; */
+  --neue-color-brand-700: #393532;
+  /* --neue-color-brand-800: #21201e; */
+  --neue-color-brand-800: #24211e;
 
   /* Grey -> Neutrals*/
   --neue-color-grey-50: #f9fafaff;
@@ -64,6 +66,18 @@
   /* Label Line Heights */
   --neue-line-height-label-sm: 16px;
   --neue-line-height-label-sm-desktop: 16px;
+
+  --neue-letter-spacing-h1: -1.8px;
+  --neue-letter-spacing-h1-desktop: -1.8px;
+  --neue-letter-spacing-h2: -1.6px;
+  --neue-letter-spacing-h2-desktop: -2px;
+  --neue-letter-spacing-h3: -0.4px;
+  --neue-letter-spacing-h3-desktop: -0.6px;
+  --neue-letter-spacing-h4: -0.6px;
+  --neue-letter-spacing-h4-desktop: -0.8px;
+
+  --neue-letter-spacing-body-lg: -0.4px;
+  --neue-letter-spacing-body-lg-desktop: -0.4px;
 
   /* Scale */
   /* --neue-scale-25: 1px;

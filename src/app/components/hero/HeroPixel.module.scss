@@ -44,3 +44,32 @@
     max-height: 220px;
   }
 }
+
+.announcement {
+  position: absolute;
+  width: max-content;
+  max-width: 80vw;
+  z-index: 998;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  padding: 8px 16px;
+  background-color: var(--primary-800);
+  text-transform: uppercase;
+  color: var(--text-on-action);
+
+  @media (max-width: 750px) {
+    bottom: 70vh;
+  }
+
+  & p {
+    font-size: var(--font-size-body-sm-desktop);
+    text-align: center;
+    font-family: var(--font-headings);
+
+    @media (max-width: 750px) {
+      font-size: var(--font-size-body-sm);
+    }
+  }
+}

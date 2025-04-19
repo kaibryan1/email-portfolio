@@ -13,7 +13,18 @@ import { scaleLabel } from "./SwitchAnimations";
 
 export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
   const switchRef = useRef(null);
-  const { themeName } = useTheme();
+  const { themeName, mode, updateMode } = useTheme();
+
+  // Switch Mode
+  const handleModeSwitch = () => {
+    console.log("clicked!");
+    const newMode = mode === "light" ? "dark" : "light";
+    console.log(newMode);
+    updateMode(newMode);
+
+    // Store inside Local Storage and Reload the browser
+    localStorage.setItem("mode", newMode);
+  };
 
   useEffect(() => {
     if (!switchRef.current) return;
@@ -40,21 +51,76 @@ export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
   }, []);
 
   return (
-    <div ref={switchRef} onClick={handleClick} className={styles.switchIcon}>
-      <div className={styles.labelWrapper}>
-        {/* Arrow Up*/}
-        <div className={styles.iconsMask}>
-          <motion.div
-            className={styles.iconsWrapper}
-            initial={{ y: 0 }}
-            animate={{
-              y: isActive ? "-50%" : "0%",
-              transition: { duration: 0.4 },
-            }}
-            exit={{ y: 0 }}
+    <div className={styles.wrapper}>
+      {/* <div className={styles.modeIcon} onClick={handleModeSwitch}>
+        <div>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            {themeName === "neue" ? (
-              // Neue Arrow
+            <path
+              className={styles.icon_stroke}
+              d="M12 5V19M12 5L6 11M12 5L18 11"
+              stroke="#000000"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </div> */}
+      <div ref={switchRef} onClick={handleClick} className={styles.switchIcon}>
+        <div className={styles.labelWrapper}>
+          {/* Arrow Up*/}
+          <div className={styles.iconsMask}>
+            <motion.div
+              className={styles.iconsWrapper}
+              initial={{ y: 0 }}
+              animate={{
+                y: isActive ? "-50%" : "0%",
+                transition: { duration: 0.4 },
+              }}
+              exit={{ y: 0 }}
+            >
+              {themeName === "neue" ? (
+                // Neue Arrow
+                <div>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      className={styles.icon_stroke}
+                      d="M12 5V19M12 5L6 11M12 5L18 11"
+                      stroke="#000000"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              ) : (
+                // Pixel Arrow
+                <svg
+                  className={styles.icon_fill}
+                  fill="#000000"
+                  height="20px"
+                  width="20px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="7,12 7,11 9,11 9,9 11,9 11,21 13,21 13,9 15,9 15,11 17,11 17,12 19,12 19,9 17,9 17,7 15,7 15,5 14,5 14,4 13,4 
+13,3 11,3 11,4 10,4 10,5 9,5 9,7 7,7 7,9 5,9 5,12 "
+                  />
+                </svg>
+              )}
               <div>
                 <svg
                   width="20"
@@ -65,7 +131,7 @@ export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
                 >
                   <path
                     className={styles.icon_stroke}
-                    d="M12 5V19M12 5L6 11M12 5L18 11"
+                    d="M6 6L18 18M18 6L6 18"
                     stroke="#000000"
                     strokeWidth="2"
                     strokeLinecap="round"
@@ -73,55 +139,22 @@ export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
                   />
                 </svg>
               </div>
-            ) : (
-              // Pixel Arrow
-              <svg
-                className={styles.icon_fill}
-                fill="#000000"
-                height="20px"
-                width="20px"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polygon
-                  points="7,12 7,11 9,11 9,9 11,9 11,21 13,21 13,9 15,9 15,11 17,11 17,12 19,12 19,9 17,9 17,7 15,7 15,5 14,5 14,4 13,4 
-13,3 11,3 11,4 10,4 10,5 9,5 9,7 7,7 7,9 5,9 5,12 "
-                />
-              </svg>
-            )}
-            <div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  className={styles.icon_stroke}
-                  d="M6 6L18 18M18 6L6 18"
-                  stroke="#000000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </motion.div>
-        </div>
-        <AnimatePresence mode="wait">
-          {!isActive && (
-            <motion.div
-              className={styles.label}
-              variants={scaleLabel}
-              initial="initial"
-              animate="enter"
-              exit="exit"
-            >
-              <p>Switch Theme</p>
             </motion.div>
-          )}
-        </AnimatePresence>
+          </div>
+          <AnimatePresence mode="wait">
+            {!isActive && (
+              <motion.div
+                className={styles.label}
+                variants={scaleLabel}
+                initial="initial"
+                animate="enter"
+                exit="exit"
+              >
+                <p>Switch Theme</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );

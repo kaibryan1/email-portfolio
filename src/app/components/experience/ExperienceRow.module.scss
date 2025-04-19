@@ -111,6 +111,13 @@
       align-items: flex-start;
       gap: var(--spacing-md);
     }
+
+    & .pillsWrapper {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing-sm);
+    }
+
     &_year {
       display: none !important;
       @media (max-width: 750px) {

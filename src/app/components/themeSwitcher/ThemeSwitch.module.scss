@@ -14,9 +14,9 @@
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: var(--spacing-sm) var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-md);
   border: var(--border-width-sm) solid var(--border-primary);
-  background-color: var(--surface-page);
+  background-color: var(--surface-primary);
 
   @media (max-width: 750px) {
     padding: var(--spacing-md) var(--spacing-md);
@@ -32,7 +32,7 @@
 .imageWrapper {
   position: relative;
   z-index: 2 !important;
-  min-width: 64px;
+  width: 72px;
   height: 48px;
   border-radius: var(--border-radius-sm);
   overflow: hidden;

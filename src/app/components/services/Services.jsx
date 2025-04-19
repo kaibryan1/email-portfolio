@@ -1,8 +1,13 @@
 "use client";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import styles from "./Services.module.scss";
 import Title from "../title/Title"; //Title Compo
 import Description from "../description/Description"; //Description Compo
 import ServiceCard from "../serviceCard/ServiceCard"; //Card
+import { useTheme } from "@/app/store/ThemeProvider";
 
 // DATA
 import { _SERVICES } from "@/_data/_SERVICES";
@@ -11,6 +16,9 @@ const secondTitle = _SERVICES.title.secondLine;
 const tag = _SERVICES.subtitle.tag;
 const body = _SERVICES.subtitle.body;
 const cards = _SERVICES.cards;
+
+//plugins
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
   return (

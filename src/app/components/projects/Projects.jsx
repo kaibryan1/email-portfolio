@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import styles from "./Projects.module.scss";
 import Title from "../title/Title";
 import Description from "../description/Description";
 import ProjectCard from "./ProjectCard";
+import { useTheme } from "@/app/store/ThemeProvider";
 
 // Data
 import { _PROJECTS } from "@/_data/_PROJECTS";

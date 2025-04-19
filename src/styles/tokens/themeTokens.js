@@ -53,6 +53,19 @@ export const themes = {
       "--line-height-label-md-desktop":
         "var(--neue-line-height-label-md-desktop)",
 
+      "--letter-spacing-h1": "var(--neue-letter-spacing-h1)",
+      "--letter-spacing-h1-desktop": "var(--neue-letter-spacing-h1-desktop)",
+      "--letter-spacing-h2": "var(--neue-letter-spacing-h2)",
+      "--letter-spacing-h2-desktop": "var(--neue-letter-spacing-h2-desktop)",
+      "--letter-spacing-h3": "var(--neue-letter-spacing-h3)",
+      "--letter-spacing-h3-desktop": "var(--neue-letter-spacing-h3-desktop)",
+      "--letter-spacing-h4": "var(--neue-letter-spacing-h4)",
+      "--letter-spacing-h4-desktop": "var(--neue-letter-spacing-h4-desktop)",
+
+      "--letter-spacing-body-lg": "var(--neue-letter-spacing-body-lg)",
+      "--letter-spacing-body-lg-desktop":
+        "var(--neue-letter-spacing-body-lg-desktop)",
+
       "--para-spacing-body-sm": "var(--neue-para-spacing-body-sm)",
       "--para-spacing-body-sm-desktop":
         "var(--neue-para-spacing-body-sm-desktop)",
@@ -62,8 +75,6 @@ export const themes = {
       "--para-spacing-body-lg": "var(--neue-para-spacing-body-lg)",
       "--para-spacing-body-lg-desktop":
         "var(--neue-para-spacing-body-lg-desktop)",
-
-      "--border-wdith": "var(--neue-border-wdith)",
     },
     light: {
       // Brand Color
@@ -160,6 +171,19 @@ export const themes = {
       "--line-height-label-md-desktop":
         "var(--pixel-line-height-label-md-desktop)",
 
+      "--letter-spacing-h1": "var(--pixel-letter-spacing-h1)",
+      "--letter-spacing-h1-desktop": "var(--pixel-letter-spacing-h1-desktop)",
+      "--letter-spacing-h2": "var(--pixel-letter-spacing-h2)",
+      "--letter-spacing-h2-desktop": "var(--pixel-letter-spacing-h2-desktop)",
+      "--letter-spacing-h3": "var(--pixel-letter-spacing-h3)",
+      "--letter-spacing-h3-desktop": "var(--pixel-letter-spacing-h3-desktop)",
+      "--letter-spacing-h4": "var(--pixel-letter-spacing-h4)",
+      "--letter-spacing-h4-desktop": "var(--pixel-letter-spacing-h4-desktop)",
+
+      "--letter-spacing-body-lg": "var(--pixel-letter-spacing-body-lg)",
+      "--letter-spacing-body-lg-desktop":
+        "var(--pixel-letter-spacing-body-lg-desktop)",
+
       "--para-spacing-body-sm": "var(--pixel-para-spacing-body-sm)",
       "--para-spacing-body-sm-desktop":
         "var(--pixel-para-spacing-body-sm-desktop)",
@@ -169,8 +193,6 @@ export const themes = {
       "--para-spacing-body-lg": "var(--pixel-para-spacing-body-lg)",
       "--para-spacing-body-lg-desktop":
         "var(--pixel-para-spacing-body-lg-desktop)",
-
-      "--border-wdith": "var(--pixel-border-wdith)",
     },
     light: {
       // Brand Color

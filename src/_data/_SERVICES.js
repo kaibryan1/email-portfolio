@@ -45,7 +45,7 @@ export const _SERVICES = {
         "Scalable",
         "Multi Theming",
         "Maintainable",
-        "Inter Brands",
+        "Multi Brands",
       ],
     },
   ],

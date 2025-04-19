@@ -10,43 +10,9 @@ import NavListItems from "../navListItems/NavListItems";
 import Curve from "../curve/Curve";
 import MailTo from "../mailTo/MailTo";
 
-const navList = [
-  {
-    id: 1,
-    sectionId: "section_services",
-    label: "Services",
-    link: "url",
-    handle: "/icons/icon_service.png",
-  },
-  {
-    id: 2,
-    sectionId: "section_work",
-    label: "Work",
-    link: "url",
-    handle: "/icons/icon_work.png",
-  },
-  {
-    id: 3,
-    sectionId: "section_resume",
-    label: "Resume",
-    link: "url",
-    handle: "/icons/icon_resume.png",
-  },
-  {
-    id: 4,
-    sectionId: "section_about",
-    label: "About",
-    link: "url",
-    handle: "/icons/icon_about.png",
-  },
-  {
-    id: 5,
-    sectionId: "section_contact",
-    label: "Contacts",
-    link: "url",
-    handle: "/icons/icon_contact.png",
-  },
-];
+// Data
+import { _NAVBAR } from "@/_data/_NAVBAR";
+const { navList } = _NAVBAR;
 
 export default function Menu({ isActive }) {
   const pathname = usePathname();
@@ -74,8 +40,11 @@ export default function Menu({ isActive }) {
             <div className={styles.socials}>
               <Tag className={styles.tag} label={"[SOCIALS]"} />
               <div className={styles.links}>
-                <a href="">
-                  LinkedIn{" "}
+                <a
+                  href="https://www.linkedin.com/in/htooaungglwinn/"
+                  target="_blank"
+                >
+                  LinkedIn
                   <svg
                     width="20"
                     height="20"
@@ -93,8 +62,8 @@ export default function Menu({ isActive }) {
                     />
                   </svg>
                 </a>
-                <a href="">
-                  Instagram{" "}
+                <a href="https://www.instagram.com/kai_ux/" target="_blank">
+                  Instagram
                   <svg
                     width="20"
                     height="20"

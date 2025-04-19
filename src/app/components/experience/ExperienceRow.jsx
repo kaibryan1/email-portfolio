@@ -65,7 +65,7 @@ export default function ExperienceRow({ data, isActive, onEnter, onLeave }) {
         </div>
         <div className={styles.row_second}>
           <Tag label={type} state={isActive ? "hovered" : ""} />
-          <span className="flex-row-center flex-wrap gap-sm">
+          <span className={styles.pillsWrapper}>
             {hashTags.map((tag, index) => (
               <Tag
                 label={tag}

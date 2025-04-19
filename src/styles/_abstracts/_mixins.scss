@@ -22,42 +22,49 @@
 @mixin heading-1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
 }
 
 @mixin heading-1-desktop {
   font-size: var(--font-size-h1-desktop);
   line-height: var(--line-height-h1-desktop);
+  letter-spacing: var(--letter-spacing-h1-desktop);
 }
 
 @mixin heading-2 {
   font-size: var(--font-size-h2);
   line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
 }
 
 @mixin heading-2-desktop {
   font-size: var(--font-size-h2-desktop);
   line-height: var(--line-height-h2-desktop);
+  letter-spacing: var(--letter-spacing-h2-desktop);
 }
 
 @mixin heading-3 {
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
 }
 
 @mixin heading-3-desktop {
   font-size: var(--font-size-h3-desktop);
   line-height: var(--line-height-h3-desktop);
-  font-weight: 600;
+  letter-spacing: var(--letter-spacing-h3-desktop);
 }
 
 @mixin heading-4 {
   font-size: var(--font-size-h4);
   line-height: var(--line-height-h4);
+  letter-spacing: var(--letter-spacing-h4);
 }
 
 @mixin heading-4-desktop {
   font-size: var(--font-size-h4-desktop);
   line-height: var(--line-height-h4-desktop);
+  letter-spacing: var(--letter-spacing-h4-desktop);
 }
 
 // Labels
@@ -111,9 +118,11 @@
 @mixin body-lg {
   font-size: var(--font-size-body-lg);
   line-height: var(--line-height-body-lg);
+  letter-spacing: var(--letter-spacing-body-lg);
 
   @include above(750px) {
     font-size: var(--font-size-body-lg-desktop);
     line-height: var(--line-height-body-lg-desktop);
+    letter-spacing: var(--letter-spacing-body-lg-desktop);
   }
 }

@@ -69,6 +69,18 @@
   --pixel-line-height-label-md: 16px;
   --pixel-line-height-label-md-desktop: 24px;
 
+  --pixel-letter-spacing-h1: -0.4px;
+  --pixel-letter-spacing-h1-desktop: -0.6px;
+  --pixel-letter-spacing-h2: 0.4px;
+  --pixel-letter-spacing-h2-desktop: 0.6px;
+  --pixel-letter-spacing-h3: 0.6px;
+  --pixel-letter-spacing-h3-desktop: 0.8px;
+  --pixel-letter-spacing-h4: 0.6px;
+  --pixel-letter-spacing-h4-desktop: 0.8px;
+
+  --pixel-letter-spacing-body-lg: -0.4px;
+  --pixel-letter-spacing-body-lg-desktop: -0.8px;
+
   /* Scale */
   /* --pixel-scale-25: 1px;
   --pixel-scale-1800: 100px; */

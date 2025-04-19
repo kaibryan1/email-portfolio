@@ -15,7 +15,7 @@ export default function ThemeSwitcher() {
   const [isActive, setIsActive] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const { themeName, mode, updateTheme } = useTheme(); //Get theme name and mode from context
+  const { themeName, mode, updateTheme, updateMode } = useTheme(); //Get theme name and mode from context
 
   const handleSwitch = (newTheme) => {
     const newMode = mode === "light" ? "light" : "dark"; // Ignore this we will add switch Mode Later

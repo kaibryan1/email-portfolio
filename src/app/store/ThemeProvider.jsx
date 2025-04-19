@@ -25,6 +25,11 @@ export const ThemeProvider = ({ children }) => {
     }, 50);
   };
 
+  // Funtion to switch mode
+  const updateMode = (newMode) => {
+    setMode(newMode);
+  };
+
   // Theme application effect
   useEffect(() => {
     const skipTheme = localStorage.getItem("skipThemeApply") === "true";
@@ -69,6 +74,7 @@ export const ThemeProvider = ({ children }) => {
         themeName,
         mode,
         updateTheme,
+        updateMode,
         isChangingTheme,
         setIsChangingTheme,
       }}

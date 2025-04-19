@@ -11,7 +11,7 @@ import Pill from "../pill/Pill";
 export default function ServiceCard({ card }) {
   return (
     <div className={`cardWrapper ${styles.card} container grid-desktop`}>
-      <h1 className={`h2 ${styles.card_id}`}>{card.id}</h1>
+      <h1 className={`h2 ${styles.card_id}`}>[{card.id}]</h1>
       <h2 className={styles.card_title}>{card.title}</h2>
       <div className={styles.card_tag}>
         <Tag label={card.tag} />
