@@ -43,13 +43,13 @@ export default function HeroNeue() {
           <div className={`${styles.grid_row} grid-desktop`}>
             <Description tag={tag} body={body} delay={heroDelay} />
             <ImageMask delay={heroDelay} className={styles.heroImage}>
-              <Image
+              <img
                 src={`/images/about/${heroImage}`}
+                loading="eager"
+                fetchPriority="high"
                 alt="Hero Image"
-                width={1000}
-                height={1000}
                 className={styles.image}
-              ></Image>
+              ></img>
               <div className={styles.blur}></div>
             </ImageMask>
           </div>

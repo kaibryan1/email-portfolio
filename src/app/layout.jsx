@@ -1,5 +1,6 @@
 // import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.scss";
+import Head from "next/head";
 import { Manrope, Reddit_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "./store/ThemeProvider";
@@ -43,6 +44,14 @@ export default function RootLayout({ children }) {
         data-theme="neue"
         className={`${jersery10.variable} ${pixterGranular.variable} ${manrope.variable} ${redditMono.variable}`}
       >
+        <Head>
+          <link rel="preload" as="image" href="/images/themes/theme_neue.jpg" />
+          <link
+            rel="preload"
+            as="image"
+            href="/images/themes/theme_pixel.png"
+          />
+        </Head>
         <body>
           <ThemeFavicon />
           <ThemeSwitcher />

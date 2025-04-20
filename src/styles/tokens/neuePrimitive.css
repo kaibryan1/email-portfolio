@@ -1,13 +1,11 @@
 :root {
   /* Brand -> Primary */
-  --neue-color-brand-50: #f7f3f0;
-  --neue-color-brand-100: #fbf6f1;
-  --neue-color-brand-300: #f0e5dd;
-  --neue-color-brand-500: #787069;
-  /* --neue-color-brand-700: #332f2d; */
-  --neue-color-brand-700: #393532;
-  /* --neue-color-brand-800: #21201e; */
-  --neue-color-brand-800: #24211e;
+  --neue-color-brand-50: hsl(24, 32%, 96%);
+  --neue-color-brand-100: hsl(30, 56%, 96%);
+  --neue-color-brand-300: hsl(25, 39%, 90%);
+  --neue-color-brand-500: hsl(28, 7%, 44%);
+  --neue-color-brand-700: hsl(20, 6%, 19%);
+  --neue-color-brand-800: hsl(30, 4%, 12%);
 
   /* Grey -> Neutrals*/
   --neue-color-grey-50: #f9fafaff;

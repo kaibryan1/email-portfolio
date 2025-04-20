@@ -4,6 +4,9 @@ import styles from "./home.module.scss";
 import { useEffect } from "react";
 import { useTheme } from "@/app/store/ThemeProvider";
 
+// Next js
+import Head from "next/head";
+
 // Components
 import Header from "../../header/Header";
 import Navbar from "../../navbar/Navbar";
@@ -21,6 +24,21 @@ export default function page() {
 
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href="/images/about/kai_neue.png" />
+        <link rel="preload" as="image" href="/images/projects/cover_1.jpg" />
+        <link rel="preload" as="image" href="/images/projects/cover_2.jpg" />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/projects/project_neue.jpg"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/projects/project_synergy.jpg"
+        />
+      </Head>
       <main className={styles.page}>
         <Header />
         {!isChangingTheme && (

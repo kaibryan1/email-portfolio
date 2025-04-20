@@ -13,14 +13,16 @@ export const _PROJECTS = {
       year: 2025,
       type: "[FREELANCE]",
       roles: ["Creative Direction", "Development"],
-      coverImage: "project_1.jpg",
+      coverImage: "cover_1.jpg",
+      projectImage: "project_synergy.jpg",
     },
     {
       title: "Neue Design System",
       year: 2025,
       type: "[CONCEPTUAL]",
       roles: ["Token Magagement", "Design System"],
-      coverImage: "project_2.jpg",
+      coverImage: "cover_2.jpg",
+      projectImage: "project_neue.jpg",
     },
   ],
 };

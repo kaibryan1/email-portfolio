@@ -10,7 +10,7 @@ import Tag from "../tag/Tag"; //Tag compo
 import SplitHeadings from "@/app/animation/split/SplitHeadings";
 
 export default function ProjectCard({ data, index }) {
-  const { title, year, type, roles, coverImage } = data;
+  const { title, year, type, roles, coverImage, projectImage } = data;
   const imageRef = useRef([]);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -101,8 +101,16 @@ export default function ProjectCard({ data, index }) {
   return (
     <div className={styles.card} ref={containerRef}>
       <div className={styles.card_imageContainer}>
+        <div className={styles.projectImage}>
+          <img
+            src={`/images/projects/${projectImage}`}
+            alt="Project Cover Image Showing Preview"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
         <Image
-          className={styles.imageWrapper}
+          className={styles.coverImage}
           ref={(el) => (imageRef.current[index] = el)}
           src={`/images/projects/${coverImage}`}
           alt="projectCoverImage"

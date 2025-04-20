@@ -20,12 +20,34 @@
 
   &_imageContainer {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     border-radius: var(--border-radius-md);
     overflow: hidden;
 
-    & .imageWrapper {
+    & .projectImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsla(0, 0%, 0%, 0.2);
+
+      & img {
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        width: 80%;
+        height: max-content;
+        object-fit: contain;
+      }
+    }
+
+    & .coverImage {
       transform: scale(1.2);
+      position: relative;
+      z-index: 1;
+      background-color: var(--primary-300);
     }
 
     & img {
@@ -75,6 +97,7 @@
 
 .cta_container {
   position: absolute;
+  z-index: 4;
   top: 0;
   left: 0;
   width: 100%;
@@ -97,6 +120,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(240, 229, 221, 0.1) 0px 0px 24px;
 
     & span {
       display: flex;

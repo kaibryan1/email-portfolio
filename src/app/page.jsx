@@ -29,7 +29,6 @@ export default function Home() {
           <div className={styles.texture}></div>
           <Loader />
           <Page />
-          {/* <Cursor /> */}
         </section>
       </ToastProvider>
     </SmoothScrollProvider>
