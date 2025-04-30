@@ -25,8 +25,8 @@ export const _FOOTER = {
     },
     {
       id: 3,
-      sectionId: "section_resume",
-      label: "Resume",
+      sectionId: "section_experience",
+      label: "experience",
       link: null,
       handle: "/icons/icon_resume.png",
     },
@@ -50,6 +50,13 @@ export const _FOOTER = {
       label: "Instagram",
       link: "https://www.instagram.com/kai_ux/",
       handle: "/icons/icon_insta.png",
+    },
+    {
+      id: 7,
+      sectionId: "null",
+      label: "Resume",
+      link: "https://htooaunglwincv.tiiny.site/",
+      handle: "/icons/icon_resume.png",
     },
   ],
   email: {

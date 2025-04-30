@@ -10,7 +10,7 @@ import Tag from "../tag/Tag"; //Tag compo
 import SplitHeadings from "@/app/animation/split/SplitHeadings";
 
 export default function ProjectCard({ data, index }) {
-  const { title, year, type, roles, coverImage, projectImage } = data;
+  const { title, year, type, roles, coverImage, projectImage, link } = data;
   const imageRef = useRef([]);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -98,9 +98,17 @@ export default function ProjectCard({ data, index }) {
     };
   }, []);
 
+  const handleClick = () => {
+    if (link) {
+      // External navigation
+      window.open(link, "_blank");
+      return;
+    }
+  };
+
   return (
     <div className={styles.card} ref={containerRef}>
-      <div className={styles.card_imageContainer}>
+      <div onClick={handleClick} className={styles.card_imageContainer}>
         <div className={styles.projectImage}>
           <img
             src={`/images/projects/${projectImage}`}

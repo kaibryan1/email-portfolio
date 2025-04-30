@@ -24,8 +24,8 @@ export const _NAVBAR = {
     },
     {
       id: 3,
-      sectionId: "section_resume",
-      label: "Resume",
+      sectionId: "section_experience",
+      label: "Experience",
       link: null,
       handle: "/icons/icon_resume.png",
     },
