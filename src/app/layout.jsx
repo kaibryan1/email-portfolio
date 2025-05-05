@@ -34,6 +34,28 @@ const redditMono = Reddit_Mono({
 export const metadata = {
   title: "Kai Bryant - Creative Web and UX Designer",
   description: "A creative Web and User Experience specialist.",
+  openGraph: {
+    title: "Kai Bryant | UI/UX & Web Designer",
+    description:
+      "Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands.",
+    url: "https://kaifolio.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "https://kaifolio.vercel.app/preview_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Preview image for Kai Bryant portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kai Bryant | UI/UX & Web Designer",
+    description:
+      "Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands.",
+    images: ["https://kaifolio.vercel.app/preview_image.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -51,22 +73,6 @@ export default function RootLayout({ children }) {
             as="image"
             href="/images/themes/theme_pixel.png"
           />
-
-          {/* Open Graph Tags */}
-          <meta
-            property="og:title"
-            content="Kai bryant | UI/UX & Web Designer"
-          />
-          <meta
-            property="og:description"
-            content="Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands. "
-          />
-          <meta
-            property="og:image"
-            content="https://kaifolio.vercel.app/preview_image.png"
-          />
-          <meta property="og:url" content="https://kaifolio.vercel.app/" />
-          <meta property="og:type" content="website" />
         </Head>
         <body>
           <ThemeFavicon />
