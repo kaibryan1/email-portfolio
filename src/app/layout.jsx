@@ -51,6 +51,22 @@ export default function RootLayout({ children }) {
             as="image"
             href="/images/themes/theme_pixel.png"
           />
+
+          {/* Open Graph Tags */}
+          <meta
+            property="og:title"
+            content="Kai bryant | UI/UX & Web Designer"
+          />
+          <meta
+            property="og:description"
+            content="Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands. "
+          />
+          <meta
+            property="og:image"
+            content="https://kaifolio.vercel.app/preview_image.png"
+          />
+          <meta property="og:url" content="https://kaifolio.vercel.app/" />
+          <meta property="og:type" content="website" />
         </Head>
         <body>
           <ThemeFavicon />
