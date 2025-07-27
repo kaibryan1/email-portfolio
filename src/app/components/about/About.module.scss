@@ -14,13 +14,17 @@
   margin-bottom: var(--spacing-3xl);
   color: var(--text-body) !important;
   // text-transform: uppercase;
-  line-height: var(--line-height-h1-desktop);
+  line-height: var(--line-height-h2-desktop);
   vertical-align: middle;
   letter-spacing: -1.5px;
-  letter-spacing: var(--letter-spacing-h2-desktop);
+  letter-spacing: var(--letter-spacing-h3-desktop);
+  // font-size: var(--font-size-h2-desktop);
+  text-transform: uppercase;
+  font-weight: 550;
 
   @media (max-width: 750px) {
     line-height: var(--line-height-h1);
+    margin-bottom: 0px;
   }
 
   & span {
@@ -40,6 +44,12 @@
 }
 
 .about_image {
+  margin-top: 64px;
+
+  @media (max-width: 750px) {
+    margin-top: 0px;
+  }
+
   & .detailsWrapper {
     grid-column: 6/-1;
     display: grid;
@@ -48,6 +58,7 @@
 
     @media (max-width: 750px) {
       display: block;
+      margin-top: 0px !important;
     }
   }
 
@@ -75,6 +86,9 @@
     margin-bottom: var(--spacing-6xl);
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 72px;
 
     @media (max-width: 750px) {
       justify-content: flex-start;
@@ -88,7 +102,7 @@
       @media (max-width: 750px) {
         width: 56px;
         height: 56px;
-        transform: rotate(0deg);
+        transform: rotate(90deg);
       }
 
       & svg {
@@ -116,9 +130,10 @@
   position: relative;
   z-index: 1;
   background-color: var(--primary-300);
+  display: none;
 
   @media (max-width: 750px) {
-    max-height: 45vh;
+    max-height: 0vh;
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
   }

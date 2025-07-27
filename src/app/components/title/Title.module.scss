@@ -22,6 +22,7 @@
   &_rightAligned {
     text-align: right;
     color: var(--text-heading-secondary);
+    opacity: 0.6;
     @include mix.heading-1-desktop;
 
     @include mix.below(450px) {

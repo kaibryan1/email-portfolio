@@ -62,7 +62,10 @@ export default function Menu({ isActive }) {
                     />
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/kai_ux/" target="_blank">
+                <a
+                  href="https://www.instagram.com/kaidesigns_emails/"
+                  target="_blank"
+                >
                   Instagram
                   <svg
                     width="20"
@@ -81,7 +84,7 @@ export default function Menu({ isActive }) {
                     />
                   </svg>
                 </a>
-                <a href="https://htooaunglwincv.tiiny.site/" target="_blank">
+                {/* <a href="https://htooaunglwincv.tiiny.site/" target="_blank">
                   Resume
                   <svg
                     width="20"
@@ -99,14 +102,14 @@ export default function Menu({ isActive }) {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
           <div className={styles.footer}>
             <div>
               <Tag className={styles.tag} label={"[EMAIL]"} />
-              <MailTo mail={"thisiskai.bryant@gmail.com"} />
+              <MailTo mail={"kaidesignsmails@gmail.com"} />
             </div>
             <div className={styles.copyright}>
               <Tag>All Rights</Tag>

@@ -51,16 +51,16 @@ export const _FOOTER = {
       link: "https://www.instagram.com/kai_ux/",
       handle: "/icons/icon_insta.png",
     },
-    {
-      id: 7,
-      sectionId: "null",
-      label: "Resume",
-      link: "https://htooaunglwincv.tiiny.site/",
-      handle: "/icons/icon_resume.png",
-    },
+    // {
+    //   id: 7,
+    //   sectionId: "null",
+    //   label: "Resume",
+    //   link: "https://htooaunglwincv.tiiny.site/",
+    //   handle: "/icons/icon_resume.png",
+    // },
   ],
   email: {
     tag: "[EMAIL]",
-    body: "thisiskai.bryant@gmail.com",
+    body: "kaidesignsmails@gmail.com",
   },
 };

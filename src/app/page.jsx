@@ -26,6 +26,7 @@ export default function Home() {
     <SmoothScrollProvider>
       <ToastProvider>
         <section>
+          <div className={styles.effect}></div>
           <div className={styles.texture}></div>
           <Loader />
           <Page />

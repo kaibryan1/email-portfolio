@@ -35,9 +35,9 @@
   --neue-font-size-body-sm: 14px;
   --neue-font-size-body-sm-desktop: 16px;
   --neue-font-size-body-md: 16px;
-  --neue-font-size-body-md-desktop: 18px;
+  --neue-font-size-body-md-desktop: 17px;
   --neue-font-size-body-lg: 20px;
-  --neue-font-size-body-lg-desktop: 22px;
+  --neue-font-size-body-lg-desktop: 21px;
 
   /* Label Type Scale */
   --neue-font-size-label-sm: 12px;
@@ -57,9 +57,9 @@
   --neue-line-height-body-sm: 16px;
   --neue-line-height-body-sm-desktop: 20px;
   --neue-line-height-body-md: 20px;
-  --neue-line-height-body-md-desktop: 24px;
+  --neue-line-height-body-md-desktop: 23px;
   --neue-line-height-body-lg: 24px;
-  --neue-line-height-body-lg-desktop: 28px;
+  --neue-line-height-body-lg-desktop: 27px;
 
   /* Label Line Heights */
   --neue-line-height-label-sm: 16px;

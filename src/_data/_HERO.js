@@ -1,7 +1,7 @@
 export const _HERO = {
   title: {
-    firstTitle: "CREATIVE UX &",
-    secondTitle: " WEB DESIGNER",
+    firstTitle: "EMAIL DESIGNER",
+    secondTitle: "⸺ ROI FOCUSED",
   },
   subtitle: {
     tag: "[EXPERTISE]",

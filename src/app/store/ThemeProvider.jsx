@@ -10,7 +10,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   // Define default theme and mode here
   const [themeName, setThemeName] = useState("neue");
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
   const [isChangingTheme, setIsChangingTheme] = useState(false); // New state for tracking theme changes
 
   // A helper function to update both theme and mode

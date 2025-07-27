@@ -48,8 +48,8 @@ export default function Navbar() {
       >
         <div className={styles.logo_wrapper}>
           <div className={styles.typemark}>
-            <p>KAI BRYANT© CREATIVE</p>
-            <p>⸺ WEB & UX DESIGNER</p>
+            <p>KAI BRYANT© ROI</p>
+            <p>⸺ FOCUSED DESIGNER</p>
           </div>
         </div>
         <div className={styles.timeWrapper}>

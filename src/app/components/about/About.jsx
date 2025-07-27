@@ -66,7 +66,7 @@ export default function About() {
         </h2>
       </div>
       <div className={`container grid-desktop ${styles.about_image}`}>
-        <ImageMask className={styles.imageWrapper} start="top 60%">
+        {/* <ImageMask className={styles.imageWrapper} start="top 60%">
           <Image
             src={`/images/about/${handle}${themeName}.png`}
             alt={alt}
@@ -74,7 +74,7 @@ export default function About() {
             height="500"
           ></Image>
           <div className={styles.blur}></div>
-        </ImageMask>
+        </ImageMask> */}
         <div className={styles.detailsWrapper}>
           <Description tag={tag} body={body} />
           <div className={styles.arrow}>
