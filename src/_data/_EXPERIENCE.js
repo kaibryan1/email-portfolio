@@ -1,7 +1,7 @@
 export const _EXPERIENCE = {
   title: {
-    firstLine: "PREVIOUS *",
-    secondLine: "EXPERIENCE",
+    firstLine: "SERVICE *",
+    secondLine: "PACKAGES",
   },
   subtitle: {
     tag: "[EXPERIENCE]",

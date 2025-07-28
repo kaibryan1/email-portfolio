@@ -11,7 +11,7 @@ export const _SERVICES = {
     {
       id: "01",
       title: "Creative Direction",
-      body: "For brands that go beyond stunning visuals, I guide the identity and feel of each email to match the brand's tone, mood, and audience. From moodboards to consistent visual system, I ensure every template feels cohesive and intentional across the customer journey.",
+      body: "For brands that go beyond stunning visuals, I guide the identity and feel of each email to match the brand's tone & audience. From moodboards to consistent visual system, I ensure every design stays cohesive and intentional across the customer journey.",
       tag: "[DESIGN]",
       pills: [
         "Brand Consistency",
