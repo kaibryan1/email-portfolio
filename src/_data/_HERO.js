@@ -5,7 +5,7 @@ export const _HERO = {
   },
   subtitle: {
     tag: "[EXPERTISE]",
-    body: "I help ambitious startups and premium brands gain a competitive edge through high-performing websites that deliver exceptional user experience.",
+    body: "Helping email marketing agencies retain premium DTC clients with scroll-stopping email designs that look visually stunning while maximizing conversions.",
   },
   images: {
     hero: {

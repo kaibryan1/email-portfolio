@@ -1,5 +1,5 @@
 export const _ABOUT = {
-  hero: "Need a complete website or UX support? I offer flexible, high-quality solutions tailored to your business goals.",
+  hero: "Looking for a creative partner to help your agency retain and grow premium DTC brands through high performing emails?",
   title: {
     firstLine: "Just A TINY*",
     secondLine: "BIT ABOUT ME",
@@ -7,8 +7,9 @@ export const _ABOUT = {
   subtitle: {
     tag: "[ABOUT ME]",
     body: [
-      "As a passionate digital product and web designer, I take pride in helping businesses grow through user-centric design and sometimes, simply creating meaningful, impactful work is reward enough for me.",
-      "One thing about me is that I love what I do, and I always give my all to deliver end products that reflect the best of my capabilities.",
+      "Look no further. I helped my clients retain two premium DTC brands within the first month of collaboration, turning initial projects into ongoing partnerships.",
+      "If you’re starting fresh or looking to elevate existing campaigns, I’m here to help you win and retain loyalty brands with confidence.",
+      "Let's make it happen!",
     ],
   },
   image: {

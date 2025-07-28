@@ -26,7 +26,7 @@ export const _FOOTER = {
     {
       id: 3,
       sectionId: "section_experience",
-      label: "experience",
+      label: "Pricing",
       link: null,
       handle: "/icons/icon_resume.png",
     },

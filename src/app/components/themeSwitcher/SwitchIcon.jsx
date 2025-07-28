@@ -165,7 +165,7 @@ export default function SwitchIcon({ handleClick, setIsActive, isActive }) {
                 <p className={styles.textContainer}>
                   <span>Available</span>
                   <br />
-                  [August 2025]
+                  [August, 2025]
                 </p>
               </motion.div>
             )}
