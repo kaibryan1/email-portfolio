@@ -32,12 +32,12 @@ const redditMono = Reddit_Mono({
 });
 
 export const metadata = {
-  title: "Kai Bryant - Creative Web and UX Designer",
-  description: "A creative Web and User Experience specialist.",
+  title: "Kai Bryant | ROI Focused Email Designer",
+  description: "Email Design Specialist For Agencies & DTC Brands",
   openGraph: {
-    title: "Kai Bryant | UI/UX & Web Designer",
+    title: "Kai Bryant | ROI Focused Email Designer",
     description:
-      "Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands.",
+      "Creative Email Designer Helping Agencies Retain Premium DTC Brands.",
     url: "https://kaifolio.vercel.app/",
     type: "website",
     images: [
@@ -51,9 +51,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kai Bryant | UI/UX & Web Designer",
+    title: "Kai Bryant | ROI Focused Email Designer",
     description:
-      "Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands.",
+      "Creative Email Designer Helping Agencies Retain Premium DTC Brands.",
     images: ["https://kaibryant.vercel.app/preview_image.png"],
   },
 };
