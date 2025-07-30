@@ -38,7 +38,7 @@ export const _EXPERIENCE = {
     {
       id: 2,
       title: "Growth Booster Package",
-      body: "Combining dynamic design and responsive Klaviyos setup. Perfect for agencies looking to scale their email marketing efforts.",
+      body: "Combining dynamic design and responsive Klaviyo setup. Perfect for agencies looking to scale their email marketing efforts.",
       year: "$550",
       type: "[Design + Klaviyo Setup]",
       hashTags: ["12 Campaigns", "+$40 extra"],
@@ -47,9 +47,9 @@ export const _EXPERIENCE = {
     {
       id: 3,
       title: "End-to-End Package",
-      body: "A complete email marketing package designed to fuel agency growth through seamless creative execution and Klaviyo integration.",
+      body: "A complete email marketing package designed to fuel agency growth through seamless content reserach, creative execution and Klaviyo integration.",
       year: "$700",
-      type: "[Design + Setup + Copy]",
+      type: "[Design + Setup + Research]",
       hashTags: ["12 Campaigns", "+55 extra"],
       image: "row_logy.jpg",
     },
