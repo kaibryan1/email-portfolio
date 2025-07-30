@@ -19,7 +19,7 @@ export const _FOOTER = {
     {
       id: 2,
       sectionId: "section_work",
-      label: "Work",
+      label: "Projects",
       link: null,
       handle: "/icons/icon_work.png",
     },

@@ -40,6 +40,9 @@
         width: 80%;
         height: max-content;
         object-fit: contain;
+        box-shadow: rgba(252, 248, 227, 0.2) 0px 0px 24px,
+          rgba(252, 248, 227, 0.2) 0px 0px 32px;
+        border: 10x solid red;
       }
     }
 
@@ -48,6 +51,7 @@
       position: relative;
       z-index: 1;
       background-color: var(--primary-300);
+      filter: brightness(0.6);
     }
 
     & img {
