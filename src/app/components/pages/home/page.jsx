@@ -46,8 +46,8 @@ export default function page() {
         )}
         <Services />
         <Projects />
-        <Experience />
         <About />
+        <Experience />
         <Footer />
       </main>
       <MaskedFooter />
