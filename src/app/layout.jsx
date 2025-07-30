@@ -42,7 +42,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://kaifolio.vercel.app/preview_image.png",
+        url: "https://kaibryant.vercel.app/preview_image.png",
         width: 1200,
         height: 630,
         alt: "Preview image for Kai Bryant portfolio",
@@ -54,7 +54,7 @@ export const metadata = {
     title: "Kai Bryant | UI/UX & Web Designer",
     description:
       "Creative Web & UX Designer Crafting Seamless User Journeys for Standout Brands.",
-    images: ["https://kaifolio.vercel.app/preview_image.png"],
+    images: ["https://kaibryant.vercel.app/preview_image.png"],
   },
 };
 
