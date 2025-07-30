@@ -8,6 +8,8 @@ import Image from "next/image";
 import Title from "../title/Title";
 import Description from "../description/Description";
 import ImageMask from "@/app/animation/ImageMask/ImageMask";
+import Tag from "../tag/Tag";
+import SplitPara from "../../animation/split/SplitPara";
 import { useTheme } from "@/app/store/ThemeProvider";
 
 // Plugins
@@ -75,7 +77,7 @@ export default function About() {
           ></Image>
           <div className={styles.blur}></div>
         </ImageMask> */}
-        <div className={styles.detailsWrapper}>
+        {/* <div className={styles.detailsWrapper}>
           <Description tag={tag} body={body} />
           <div className={styles.arrow}>
             {themeName === "neue" ? (
@@ -114,6 +116,32 @@ export default function About() {
                 </svg>
               </div>
             )}
+          </div>
+        </div> */}
+      </div>
+      <div className="grid-desktop">
+        <Description tag={tag} body={body} />
+      </div>
+      <div className="grid-desktop">
+        <div className={styles.profileWrapper}>
+          <ImageMask className={styles.imageWrapper} start="top 60%">
+            <div className={styles.profile}>
+              <img src="/mees-profile.png" alt="Profile Image of Mees" />
+            </div>
+          </ImageMask>
+          <div className={styles.profileDetails}>
+            <SplitPara
+              className={`description ${styles.description_body} ${styles.description_array}`}
+              delay={0.2}
+            >
+              <p className={styles.name}>Mees Dijkema</p>
+            </SplitPara>
+            <SplitPara
+              className={`description ${styles.description_body} ${styles.description_array}`}
+              delay={0.2}
+            >
+              <Tag className={styles.profileTitle}>[CEO of Growth Horizon]</Tag>
+            </SplitPara>
           </div>
         </div>
       </div>
