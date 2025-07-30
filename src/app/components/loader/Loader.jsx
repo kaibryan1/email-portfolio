@@ -18,7 +18,7 @@ export default function Loader() {
     // Set a delay for 0.5 second
     setTimeout(() => {
       requestAnimationFrame(animate);
-    }, 500);
+    }, 800);
 
     // Hide Styles **
     document.body.style.opacity = "1";
