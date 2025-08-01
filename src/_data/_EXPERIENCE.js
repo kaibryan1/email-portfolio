@@ -31,7 +31,7 @@ export const _EXPERIENCE = {
       title: "Visual Design Package",
       body: "A brand-aligned email design templates crafted to captivate and convert, delivered with pixel-perfect clarity.",
       year: "$400",
-      type: "[Templates]",
+      type: "[Design]",
       hashTags: ["12 Campaigns", "+$30 extra"],
       image: "row_synergy.jpg",
     },
