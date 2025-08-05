@@ -32,7 +32,7 @@ export const _EXPERIENCE = {
       body: "A brand-aligned email design templates crafted to captivate and convert, delivered with pixel-perfect clarity.",
       year: "$400",
       type: "[Design]",
-      hashTags: ["12 Campaigns", "+$30 extra"],
+      hashTags: ["+12 Campaigns", "+$30 extra"],
       image: "row_synergy.jpg",
     },
     {
@@ -41,7 +41,7 @@ export const _EXPERIENCE = {
       body: "Combining dynamic design and responsive Klaviyo setup. Perfect for agencies looking to scale their email marketing efforts.",
       year: "$550",
       type: "[Design + Klaviyo Setup]",
-      hashTags: ["12 Campaigns", "+$40 extra"],
+      hashTags: ["+12 Campaigns", "+$40 extra"],
       image: "row_xers.jpg",
     },
     {
@@ -50,7 +50,7 @@ export const _EXPERIENCE = {
       body: "A complete email marketing package designed to fuel agency growth through seamless content reserach, creative execution and Klaviyo integration.",
       year: "$700",
       type: "[Design + Setup + Research]",
-      hashTags: ["12 Campaigns", "+55 extra"],
+      hashTags: ["+12 Campaigns", "+55 extra"],
       image: "row_logy.jpg",
     },
     {
